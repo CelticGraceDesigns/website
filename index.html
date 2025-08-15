@@ -103,6 +103,7 @@
     .spacer-12{height:12px}
     .spacer-20{height:20px}
     .pill{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);font-weight:700}
+    .hero-photo{width:100%;height:100%;object-fit:cover;border-radius:16px;border:1px solid rgba(255,255,255,.08)}
   </style>
 </head>
 <body>
@@ -143,9 +144,9 @@
       </div>
       <div class="hero-card">
         <div class="hero-img">
-          <div>
-            <div>Hero Image Placeholder</div>
-            <small>Tip: drop in a lifestyle photo of your record art wall or vendor booth.</small>
+          <img src="tent1.jpg" alt="Celtic Grace Designs tent display" class="hero-photo" />
+        </div>
+            
           </div>
         </div>
         <div class="spacer-12"></div>
@@ -154,7 +155,7 @@
             <span class="tag">🔥 Sale</span>
             <div>
               <div><strong>Use code DORMVIBES20 — 20% Off</strong></div>
-              <div>Ends Sunday • Shop select record art & dorm‑friendly decor.</div>
+              <div>Ends Sunday • Shop record art.</div>
             </div>
             <a class="btn" href="#" id="etsyLink3">Shop Sale</a>
           </div>
@@ -175,7 +176,7 @@
         </div>
         <div class="card">
           <div class="title">📍 Where</div>
-          <div>Niagara Falls, NY • <em>Exact address on flyer/map</em></div>
+          <div>608 88th Street, Niagara Falls, NY 14304</div>
           <div class="spacer-8"></div>
           <a class="pill" id="mapsLink" href="#" target="_blank" rel="noopener">Get Directions</a>
         </div>
@@ -198,7 +199,7 @@
       <div class="grid cols-3">
         <!-- CARD 1 -->
         <article class="card">
-          <img src="DoGood.jpg" alt="Do Good, Be Good, God Bless and Go Bills — record art" />
+          <img src="dogood.jpg" alt="Do Good, Be Good, God Bless and Go Bills — record art" />
           <div class="title">Go Bills Record Art</div>
           <div class="price">From $30 • Ready to ship</div>
           <div class="spacer-8"></div>
@@ -206,7 +207,7 @@
         </article>
         <!-- CARD 2 -->
         <article class="card">
-          <img src="CabellerosScout.jpg" alt="Custom anodized aluminum hat clip — Caballeros Scout design" />
+          <img src="caballerosscout.jpg" alt="Custom anodized aluminum hat clip — Caballeros Scout design" />
           <div class="title">Custom Hat Clip (Black)</div>
           <div class="price">Made to order • $7</div>
           <div class="spacer-8"></div>
@@ -214,7 +215,7 @@
         </article>
         <!-- CARD 3 -->
         <article class="card">
-          <img src="seats not sides.jpg" alt="Wedding sign SVG — Pick a Seat, Not a Side" />
+          <img src="seatsnotsides.jpg" alt="Wedding sign SVG — Pick a Seat, Not a Side" />
           <div class="title">Wedding Sign (SVG)</div>
           <div class="price">Digital file • Instant download</div>
           <div class="spacer-8"></div>
@@ -229,7 +230,7 @@
     <div class="container about">
       <div class="avatar">
         <div>
-          <strong>Maker Photo Placeholder</strong>
+          <img src="me.jpg" alt="Scott in the Shop" />
           <div class="spacer-8"></div>
           <small>Drop a photo of you in the workshop for instant trust.</small>
         </div>
@@ -310,7 +311,7 @@
     const ET_SY_BILLS_URL = "https://www.etsy.com/listing/4314121934/do-good-be-good-god-bless-and-go-bills";
     const ET_SY_CLIPS_URL = "https://www.etsy.com/listing/4352373048/custom-hat-clip-laser-engraved-anodized";
     const ET_SY_NORTHPOLE_URL = "https://www.etsy.com/listing/4346019238/pick-a-seat-not-a-side-wedding-sign-svg";
-    const GOOGLE_MAPS_URL = "#"; // add your maps link when ready
+    const GOOGLE_MAPS_URL = "https://www.google.com/maps?q=608+88th+Street,+Niagara+Falls,+NY+14304"; // direct maps link
 
     // Wire links
     const setHref = (id, url) => { const el = document.getElementById(id); if(el && url && url !== '#'){ el.href = url; el.target = "_blank"; el.rel = "noopener"; }};
@@ -319,6 +320,27 @@
     setHref("p2", ET_SY_CLIPS_URL);
     setHref("p3", ET_SY_NORTHPOLE_URL);
     setHref("mapsLink", GOOGLE_MAPS_URL);
+
+    // Add embedded map under the Where card if a maps URL is provided
+    (function(){
+      const url = GOOGLE_MAPS_URL && GOOGLE_MAPS_URL !== '#'
+        ? GOOGLE_MAPS_URL.replace(/\s+/g,'+')
+        : 'https://www.google.com/maps?q=608+88th+Street,+Niagara+Falls,+NY+14304&output=embed';
+      const whereCard = document.querySelector('#popup .card:nth-child(2)');
+      if(whereCard){
+        const iframe = document.createElement('iframe');
+        iframe.src = url.includes('output=embed') ? url : (url + (url.includes('?')?'&':'?') + 'output=embed');
+        iframe.style.width = '100%';
+        iframe.style.height = '220px';
+        iframe.style.border = '0';
+        iframe.style.borderRadius = '12px';
+        iframe.loading = 'lazy';
+        const space = document.createElement('div');
+        space.className = 'spacer-8';
+        whereCard.appendChild(space);
+        whereCard.appendChild(iframe);
+      }
+    })();
 
     // Year stamp
     document.getElementById('year').textContent = new Date().getFullYear();
@@ -342,7 +364,3 @@
   </script>
 </body>
 </html>
-
-
-
-
