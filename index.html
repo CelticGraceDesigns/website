@@ -189,6 +189,24 @@
           <div class="spacer-8"></div>
           <a class="btn" href="#" id="p4">View on Etsy</a>
         </article>
+        <!-- CARD 5 (Jimmy Buffett) -->
+<article class="card">
+  <img src="buffett.jpg" alt="Jimmy Buffett silhouette record art wall décor" />
+  <div class="title">Jimmy Buffett Record Art</div>
+  <div class="price">See details on Etsy</div>
+  <div class="spacer-8"></div>
+  <a class="btn" href="#" id="p5">View on Etsy</a>
+</article>
+
+<!-- CARD 6 (Halloween Coffee Bar Sign) -->
+<article class="card">
+    <img src="scream.jpg" alt="Funny ghost Halloween coffee bar sign décor" />
+  <div class="title">Halloween Coffee Bar Sign</div>
+  <div class="price">See details on Etsy</div>
+  <div class="spacer-8"></div>
+  <a class="btn" href="#" id="p6">View on Etsy</a>
+</article>
+
       </div>
     </div>
   </section>
@@ -277,6 +295,8 @@
     const ET_SY_CLIPS_URL = "https://www.etsy.com/listing/4352373048/custom-hat-clip-laser-engraved-anodized";
     const ET_SY_NORTHPOLE_URL = "https://www.etsy.com/listing/4346019238/pick-a-seat-not-a-side-wedding-sign-svg";
     const ET_SY_DUSTER_URL = "https://www.etsy.com/listing/4353377258/crochet-sunflower-granny-square-duster";
+    const ET_SY_BUFFETT_URL = "https://www.etsy.com/listing/4314110992/jimmy-buffett-margaritaville-inspired";
+    const ET_SY_HALLOWEEN_URL = "https://www.etsy.com/listing/4352707383/halloween-coffee-bar-sign-funny-ghost";
 
     // Wire links
     const setHref = (id, url) => { const el = document.getElementById(id); if(el && url && url !== '#'){ el.href = url; el.target = "_blank"; el.rel = "noopener"; }};
@@ -286,10 +306,14 @@
     setBtn("p2", ET_SY_CLIPS_URL);
     setBtn("p3", ET_SY_NORTHPOLE_URL);
     setBtn("p4", ET_SY_DUSTER_URL);
+    setBtn("p5", ET_SY_BUFFETT_URL);
+    setBtn("p6", ET_SY_HALLOWEEN_URL);
+
 
     // Year stamp
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
+
 
