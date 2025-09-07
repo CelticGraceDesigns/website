@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Celtic Grace Designs — Laser-Crafted Art & Gifts</title>
-  <meta name="description" content="Handmade laser-cut record art, custom patches, signs, and gifts — crafted in Niagara Falls, NY. Shop our Etsy or see us at local pop-ups." />
+  <meta name="description" content="Handmade laser-engraved record art, custom hat clips, signs, and gifts — crafted in Niagara Falls, NY. Browse featured pieces or shop our Etsy store." />
   <meta property="og:title" content="Celtic Grace Designs" />
   <meta property="og:description" content="Laser-crafted record art & custom gifts. Shop Etsy." />
   <meta property="og:type" content="website" />
@@ -61,15 +61,13 @@
     @media (max-width:620px){.grid.cols-3{grid-template-columns:1fr}}
 
     .card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03));padding:14px;border:1px solid rgba(255,255,255,.08);border-radius:16px;box-shadow:var(--shadow)}
-    .card img{width:100%;aspect-ratio:1/1;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:#0f1712}
+    .card img{width:100%;aspect-ratio:1/1;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:#0f1712;object-fit:cover}
     .card .title{font-weight:700;margin:12px 0 4px}
     .card .price{opacity:.85}
 
     .about{display:grid;grid-template-columns:1fr 1fr;gap:24px}
     .about .avatar{border-radius:14px;aspect-ratio:4/3;background:linear-gradient(135deg,#162018,#0c130e);border:1px solid rgba(255,255,255,.08);display:grid;place-items:center}
     @media (max-width:900px){.about{grid-template-columns:1fr}}
-
-    .sale{background:linear-gradient(180deg, rgba(255,107,107,.18), rgba(255,107,107,.10));border:1px dashed rgba(255,107,107,.6)}
 
     .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .review{padding:16px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08)}
@@ -90,23 +88,19 @@
     .pill{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);font-weight:700}
     .hero-photo{width:100%;height:100%;object-fit:cover;border-radius:16px;border:1px solid rgba(255,255,255,.08)}
   </style>
+
   <meta name="p:domain_verify" content="d3df46f08d0e1d76a8601ae72563e75c"/>
   <!-- Pinterest Tag -->
-<script>
-!function(e){if(!window.pintrk){window.pintrk = function () {
-window.pintrk.queue.push(Array.prototype.slice.call(arguments))};var
-  n=window.pintrk;n.queue=[],n.version="3.0";var
-  t=document.createElement("script");t.async=!0,t.src=e;var
-  r=document.getElementsByTagName("script")[0];
-  r.parentNode.insertBefore(t,r)}}("https://s.pinimg.com/ct/core.js");
-pintrk('load', '2614487119519', {em: '<user_email_address>'});
-pintrk('page');
-</script>
-<noscript>
-<img height="1" width="1" style="display:none;" alt=""
-  src="https://ct.pinterest.com/v3/?event=init&tid=2614487119519&pd[em]=<hashed_email_address>&noscript=1" />
-</noscript>
-<!-- end Pinterest Tag -->
+  <script>
+  !function(e){if(!window.pintrk){window.pintrk=function(){window.pintrk.queue.push(Array.prototype.slice.call(arguments))};var n=window.pintrk;n.queue=[],n.version="3.0";var t=document.createElement("script");t.async=!0,t.src=e;var r=document.getElementsByTagName("script")[0];r.parentNode.insertBefore(t,r)}}("https://s.pinimg.com/ct/core.js");
+  pintrk('load','2614487119519',{em:'<user_email_address>'});
+  pintrk('page');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none;" alt=""
+         src="https://ct.pinterest.com/v3/?event=init&tid=2614487119519&pd[em]=<hashed_email_address>&noscript=1" />
+  </noscript>
+  <!-- end Pinterest Tag -->
 </head>
 <body>
   <!-- === Header / Nav === -->
@@ -116,7 +110,7 @@ pintrk('page');
       <nav class="nav-links" aria-label="Main">
         <a href="#shop">Shop</a>
         <a href="#about">About</a>
-        <a href="#sale">Sale</a>
+        <a href="#updates">Updates</a>
         <a href="#newsletter">Join List</a>
         <a class="btn btn-primary" href="#" id="etsyLink">Shop on Etsy</a>
       </nav>
@@ -134,27 +128,14 @@ pintrk('page');
           <a class="btn btn-ghost" href="#shop">Browse Featured</a>
         </div>
 
-        <!-- Back-to-School Sale Banner -->
+        <!-- Updates / Events -->
         <div class="spacer-12"></div>
-        <div class="banner sale" id="sale">
-          <div class="banner-inner" style="border-color: rgba(255,107,107,.5)">
-            <span class="tag">🎒 Back to School</span>
-            <div>
-              <div><strong>15% Off — Entire Etsy Shop</strong></div>
-              <div>Now thru Sept 1, 2025 • No code needed</div>
-            </div>
-            <a class="btn" href="#" id="etsyLink3">Shop Sale</a>
-          </div>
-        </div>
-
-        <!-- Upcoming Event Placeholder -->
-        <div class="spacer-12"></div>
-        <div class="banner" aria-live="polite">
+        <div class="banner" id="updates" aria-live="polite">
           <div class="banner-inner" style="border-color:rgba(255,255,255,.25)">
-            <span class="tag">📅 Upcoming</span>
+            <span class="tag">📅 Updates</span>
             <div>
-              <div><strong>October 4 Event — Pending Confirmation</strong></div>
-              <div>Details coming soon once we’re confirmed.</div>
+              <div><strong>Next Event: TBA</strong></div>
+              <div>We’re considering the <em>Wings of Hope</em> charity market (8′ table • $40 goes to the cause). We’ll post confirmation here.</div>
             </div>
           </div>
         </div>
@@ -181,21 +162,32 @@ pintrk('page');
           <div class="spacer-8"></div>
           <a class="btn" href="#" id="p1">View on Etsy</a>
         </article>
+
         <!-- CARD 2 -->
         <article class="card">
-          <img src="CabellerosScout.jpg" alt="Custom anodized aluminum hat clip — Cabelleros Scout design" />
+          <img src="CabellerosScout.jpg" alt="Custom anodized aluminum hat clip — Caballeros Scout design" />
           <div class="title">Custom Hat Clip (Black)</div>
           <div class="price">Made to order • $7</div>
           <div class="spacer-8"></div>
           <a class="btn" href="#" id="p2">View on Etsy</a>
         </article>
-        <!-- CARD 3 -->
+
+        <!-- CARD 3 (SVG) -->
         <article class="card">
           <img src="seats not sides.jpg" alt="Wedding sign SVG — Pick a Seat, Not a Side" />
           <div class="title">Wedding Sign (SVG)</div>
           <div class="price">Digital file • Instant download</div>
           <div class="spacer-8"></div>
           <a class="btn" href="#" id="p3">View on Etsy</a>
+        </article>
+
+        <!-- CARD 4 (NEW: Crochet Duster) -->
+        <article class="card">
+          <img src="duster.jpg" alt="Handmade crochet duster with sunflower granny squares" />
+          <div class="title">Crochet Duster — Sunflower</div>
+          <div class="price">$225 • Ready to ship</div>
+          <div class="spacer-8"></div>
+          <a class="btn" href="#" id="p4">View on Etsy</a>
         </article>
       </div>
     </div>
@@ -206,13 +198,13 @@ pintrk('page');
     <div class="container about">
       <div class="avatar">
         <div>
-          <img src="me2.jpg" alt="Scott in the Shop" />
+          <img src="me2.jpg" alt="Scott in the shop" />
           <div class="spacer-8"></div>
         </div>
       </div>
       <div>
         <h2>Meet the Maker</h2>
-        <p>Hi, I’m Scott — I design and laser-craft record art, anodized aluminum hat clips, signs, and gifts in Niagara Falls, NY. Each piece is cut, finished, and packed by hand.</p>
+        <p>Hi, I’m Scott — I design and laser-engrave record art, anodized aluminum hat clips, signs, and gifts in Niagara Falls, NY. Each piece is finished and packed by hand.</p>
         <div class="link-row">
           <a class="btn btn-primary" href="#" id="etsyLink4">Shop Etsy</a>
           <a class="btn" href="mailto:hello@celticgracedesigns.com">Email Me</a>
@@ -284,17 +276,19 @@ pintrk('page');
     const ET_SY_BILLS_URL = "https://www.etsy.com/listing/4314121934/do-good-be-good-god-bless-and-go-bills";
     const ET_SY_CLIPS_URL = "https://www.etsy.com/listing/4352373048/custom-hat-clip-laser-engraved-anodized";
     const ET_SY_NORTHPOLE_URL = "https://www.etsy.com/listing/4346019238/pick-a-seat-not-a-side-wedding-sign-svg";
+    const ET_SY_DUSTER_URL = "https://www.etsy.com/listing/4353377258/crochet-sunflower-granny-square-duster";
 
     // Wire links
     const setHref = (id, url) => { const el = document.getElementById(id); if(el && url && url !== '#'){ el.href = url; el.target = "_blank"; el.rel = "noopener"; }};
-    ["etsyLink","etsyLink2","etsyLink3","etsyLink4","etsyLink5"].forEach(id=>setHref(id, ETSY_SHOP_URL));
+    ["etsyLink","etsyLink2","etsyLink4","etsyLink5"].forEach(id=>setHref(id, ETSY_SHOP_URL));
     const setBtn = (id,url)=>{ const el=document.getElementById(id); if(el) { el.href = url; el.target="_blank"; el.rel="noopener"; }};
-    setBtn("p1", ET_SY_BILLS_URL); setBtn("p2", ET_SY_CLIPS_URL); setBtn("p3", ET_SY_NORTHPOLE_URL);
+    setBtn("p1", ET_SY_BILLS_URL);
+    setBtn("p2", ET_SY_CLIPS_URL);
+    setBtn("p3", ET_SY_NORTHPOLE_URL);
+    setBtn("p4", ET_SY_DUSTER_URL);
 
     // Year stamp
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-
-
