@@ -1,324 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Celtic Grace Designs — Laser-Crafted Art & Gifts</title>
-  <meta name="description" content="Handmade laser-engraved record art, custom hat clips, signs, and gifts — crafted in Niagara Falls, NY. Browse featured pieces or shop our Etsy store." />
-  <meta property="og:title" content="Celtic Grace Designs" />
-  <meta property="og:description" content="Laser-crafted record art & custom gifts. Shop Etsy." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://celticgracedesigns.com/" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#0e1510; --bg-2:#0b100c; --surface:#121a14; --text:#e9f2eb; --muted:#c3d0c7;
-      --brand:#2fbf71; --brand-2:#94e0b7; --accent:#ffd166; --danger:#ff6b6b;
-      --shadow:0 10px 30px rgba(0,0,0,.35); --radius:20px;
+<script>
+  // === QUICK CONFIG ===
+  const ETSY_SHOP_URL = "https://celticgracedesigns.etsy.com/?utm_source=website&utm_medium=landing_page&utm_campaign=share_and_save";
+
+  // Individual Listings — Share & Save + UTMs
+  const ET_SY_BILLS_URL = "https://www.etsy.com/listing/4314121934/go-bills-faux-record-josh-allen?utm_source=website&utm_medium=landing_page&utm_campaign=share_and_save";
+  const ET_SY_CLIPS_URL = "https://www.etsy.com/listing/4352373048/custom-laser-engraved-hat-clip-anodized?utm_source=website&utm_medium=landing_page&utm_campaign=share_and_save";
+  const ET_SY_NORTHPOLE_URL = "https://www.etsy.com/listing/4346019238/inclusive-wedding-sign-svg-pick-a-seat?utm_source=website&utm_medium=landing_page&utm_campaign=share_and_save";
+  const ET_SY_DUSTER_URL = "https://www.etsy.com/listing/4353377258/crochet-sunflower-granny-square-duster?utm_source=website&utm_medium=landing_page&utm_campaign=share_and_save";
+  const ET_SY_BUFFETT_URL = "https://www.etsy.com/listing/4314110992/jimmy-buffett-margaritaville-inspired?utm_source=website&utm_medium=landing_page&utm_campaign=share_and_save";
+  const ET_SY_HALLOWEEN_URL = "https://www.etsy.com/listing/4352707383/halloween-coffee-bar-sign-funny-ghost?utm_source=website&utm_medium=landing_page&utm_campaign=share_and_save";
+
+  // Wire links
+  const setHref = (id, url) => { 
+    const el = document.getElementById(id); 
+    if(el && url && url !== '#'){ 
+      el.href = url; 
+      el.target = "_blank"; 
+      el.rel = "noopener"; 
     }
-    *{box-sizing:border-box} html,body{height:100%}
-    body{
-      margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      color:var(--text);
-      background: radial-gradient(1200px 600px at 10% -10%, rgba(47,191,113,.15), transparent 60%),
-                  radial-gradient(800px 500px at 110% 10%, rgba(148,224,183,.12), transparent 60%),
-                  linear-gradient(180deg,var(--bg),var(--bg-2));
-      line-height:1.6;
-    }
-    a{color:inherit}
-    .container{max-width:1100px;margin:0 auto;padding:0 20px}
-    header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(140%) blur(10px);background:rgba(14,21,16,.5);border-bottom:1px solid rgba(255,255,255,.06)}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    .logo{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.3px}
-    .logo-mark{width:28px;height:28px;border-radius:8px;background:conic-gradient(from 0deg at 50% 50%, var(--brand), #1b7f4b 120deg, #0a5e35 240deg, var(--brand));box-shadow:var(--shadow)}
-    .nav-links{display:flex;gap:18px;align-items:center}
-    .nav-links a{opacity:.9;text-decoration:none}
-    .btn{display:inline-block;padding:12px 16px;border-radius:14px;font-weight:700;text-decoration:none;border:1px solid rgba(255,255,255,.12);transition:.2s background,.2s transform;}
-    .btn:hover{transform:translateY(-1px)}
-    .btn-primary{background:linear-gradient(180deg,var(--brand),#1aa45d);color:#062a16;border-color:transparent}
-    .btn-ghost{background:rgba(255,255,255,.06)}
+  };
+  ["etsyLink","etsyLink2","etsyLink4","etsyLink5"].forEach(id=>setHref(id, ETSY_SHOP_URL));
 
-    .hero{padding:64px 0 36px;position:relative;overflow:hidden}
-    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
-    .headline{font-family:'Playfair Display',serif;font-size:clamp(34px,5vw,54px);line-height:1.1;margin:0 0 12px}
-    .subtitle{color:var(--muted);max-width:50ch;margin:8px 0 22px}
-    .hero-card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03));padding:18px;border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);box-shadow:var(--shadow)}
-    .hero-img{aspect-ratio:4/3;width:100%;border-radius:16px;background:linear-gradient(135deg,#1a2a21,#0f1712);border:1px solid rgba(255,255,255,.08);display:grid;place-items:center;font-weight:700;color:#88bfa0}
-    .hero-img small{opacity:.7;font-weight:600}
+  const setBtn = (id,url)=>{ 
+    const el=document.getElementById(id); 
+    if(el) { 
+      el.href = url; 
+      el.target="_blank"; 
+      el.rel="noopener"; 
+    } 
+  };
+  setBtn("p1", ET_SY_BILLS_URL);
+  setBtn("p2", ET_SY_CLIPS_URL);
+  setBtn("p3", ET_SY_NORTHPOLE_URL);
+  setBtn("p4", ET_SY_DUSTER_URL);
+  setBtn("p5", ET_SY_BUFFETT_URL);
+  setBtn("p6", ET_SY_HALLOWEEN_URL);
 
-    .banner{margin:14px 0 0}
-    .banner-inner{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:14px 16px;border-radius:14px;background:linear-gradient(180deg,rgba(255,209,102,.18),rgba(255,209,102,.10));border:1px dashed rgba(255,209,102,.6)}
-    .banner strong{color:#c2a441}
-    .tag{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.14);font-size:.9rem}
-
-    .section{padding:44px 0}
-    .section h2{font-size:clamp(22px,3.6vw,30px);margin:0 0 18px}
-    .grid{display:grid;gap:18px}
-    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
-    @media (max-width:900px){.hero-grid{grid-template-columns:1fr}.grid.cols-3{grid-template-columns:1fr 1fr}}
-    @media (max-width:620px){.grid.cols-3{grid-template-columns:1fr}}
-
-    .card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03));padding:14px;border:1px solid rgba(255,255,255,.08);border-radius:16px;box-shadow:var(--shadow)}
-    .card img{width:100%;aspect-ratio:1/1;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:#0f1712;object-fit:cover}
-    .card .title{font-weight:700;margin:12px 0 4px}
-    .card .price{opacity:.85}
-
-    .about{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-    .about .avatar{border-radius:14px;aspect-ratio:4/3;background:linear-gradient(135deg,#162018,#0c130e);border:1px solid rgba(255,255,255,.08);display:grid;place-items:center}
-    @media (max-width:900px){.about{grid-template-columns:1fr}}
-
-    .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .review{padding:16px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08)}
-    @media (max-width:900px){.reviews{grid-template-columns:1fr}}
-
-    .newsletter{display:grid;grid-template-columns:1fr .6fr;gap:18px;align-items:center}
-    @media (max-width:900px){.newsletter{grid-template-columns:1fr}}
-    .newsletter .box{padding:18px;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.08);border-radius:14px}
-
-    footer{padding:40px 0;border-top:1px solid rgba(255,255,255,.08);opacity:.9}
-    .foot-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    @media (max-width:700px){.foot-grid{grid-template-columns:1fr}}
-    .link-row{display:flex;gap:14px;flex-wrap:wrap}
-
-    .spacer-8{height:8px}
-    .spacer-12{height:12px}
-    .spacer-20{height:20px}
-    .pill{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);font-weight:700}
-    .hero-photo{width:100%;height:100%;object-fit:cover;border-radius:16px;border:1px solid rgba(255,255,255,.08)}
-  </style>
-
-  <meta name="p:domain_verify" content="d3df46f08d0e1d76a8601ae72563e75c"/>
-  <!-- Pinterest Tag -->
-  <script>
-  !function(e){if(!window.pintrk){window.pintrk=function(){window.pintrk.queue.push(Array.prototype.slice.call(arguments))};var n=window.pintrk;n.queue=[],n.version="3.0";var t=document.createElement("script");t.async=!0,t.src=e;var r=document.getElementsByTagName("script")[0];r.parentNode.insertBefore(t,r)}}("https://s.pinimg.com/ct/core.js");
-  pintrk('load','2614487119519',{em:'<user_email_address>'});
-  pintrk('page');
-  </script>
-  <noscript>
-    <img height="1" width="1" style="display:none;" alt=""
-         src="https://ct.pinterest.com/v3/?event=init&tid=2614487119519&pd[em]=<hashed_email_address>&noscript=1" />
-  </noscript>
-  <!-- end Pinterest Tag -->
-  <link rel="icon" type="image/png" href="Favicon.png">
-
-</head>
-<body>
-  <!-- === Header / Nav === -->
-  <header>
-    <div class="container nav">
-      <div class="logo"><span class="logo-mark" aria-hidden="true"></span> Celtic Grace Designs</div>
-      <nav class="nav-links" aria-label="Main">
-        <a href="#shop">Shop</a>
-        <a href="#about">About</a>
-        <a href="#updates">Updates</a>
-        <a href="#newsletter">Join List</a>
-        <a class="btn btn-primary" href="#" id="etsyLink">Shop on Etsy</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- === Hero === -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <h1 class="headline">Laser-Crafted Art & Gifts, Made in Niagara Falls</h1>
-        <p class="subtitle">Music-inspired record art, anodized aluminum hat clips, custom patches, and seasonal signage — designed and made by hand.</p>
-        <div class="link-row">
-          <a class="btn btn-primary" href="#" id="etsyLink2">Shop Our Etsy Store</a>
-          <a class="btn btn-ghost" href="#shop">Browse Featured</a>
-        </div>
-
-        <!-- Updates / Events -->
-        <div class="spacer-12"></div>
-        <div class="banner" id="updates" aria-live="polite">
-          <div class="banner-inner" style="border-color:rgba(255,255,255,.25)">
-            <span class="tag">📅 Updates</span>
-            <div>
-              <div><strong>Next Event: TBA</strong></div>
-              <div>We’re considering the <em>Wings of Hope</em> charity market (8′ table • $40 goes to the cause). We’ll post confirmation here.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-card">
-        <div class="hero-img">
-          <img src="tent1.jpg" alt="Celtic Grace Designs tent display" class="hero-photo" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- === Featured Products === -->
-  <section class="section" id="shop">
-    <div class="container">
-      <h2>Featured Picks</h2>
-      <div class="grid cols-3">
-        <!-- CARD 1 -->
-        <article class="card">
-          <img src="DoGood.jpg" alt="Do Good, Be Good, God Bless and Go Bills — record art" />
-          <div class="title">Go Bills Record Art</div>
-          <div class="price">From $30 • Ready to ship</div>
-          <div class="spacer-8"></div>
-          <a class="btn" href="#" id="p1">View on Etsy</a>
-        </article>
-
-        <!-- CARD 2 -->
-        <article class="card">
-          <img src="CabellerosScout.jpg" alt="Custom anodized aluminum hat clip — Caballeros Scout design" />
-          <div class="title">Custom Hat Clip (Black)</div>
-          <div class="price">Made to order • $7</div>
-          <div class="spacer-8"></div>
-          <a class="btn" href="#" id="p2">View on Etsy</a>
-        </article>
-
-        <!-- CARD 3 (SVG) -->
-        <article class="card">
-          <img src="seats not sides.jpg" alt="Wedding sign SVG — Pick a Seat, Not a Side" />
-          <div class="title">Wedding Sign (SVG)</div>
-          <div class="price">Digital file • Instant download</div>
-          <div class="spacer-8"></div>
-          <a class="btn" href="#" id="p3">View on Etsy</a>
-        </article>
-
-        <!-- CARD 4 (NEW: Crochet Duster) -->
-        <article class="card">
-          <img src="Duster.jpg" alt="Handmade crochet duster with sunflower granny squares" />
-          <div class="title">Crochet Duster — Sunflower</div>
-          <div class="price">$225 • Ready to ship</div>
-          <div class="spacer-8"></div>
-          <a class="btn" href="#" id="p4">View on Etsy</a>
-        </article>
-        <!-- CARD 5 (Jimmy Buffett) -->
-<article class="card">
-  <img src="buffett.jpg" alt="Jimmy Buffett silhouette record art wall décor" />
-  <div class="title">Jimmy Buffett Record Art</div>
-  <div class="price">See details on Etsy</div>
-  <div class="spacer-8"></div>
-  <a class="btn" href="#" id="p5">View on Etsy</a>
-</article>
-
-<!-- CARD 6 (Halloween Coffee Bar Sign) -->
-<article class="card">
-    <img src="scream.jpg" alt="Funny ghost Halloween coffee bar sign décor" />
-  <div class="title">Halloween Coffee Bar Sign</div>
-  <div class="price">See details on Etsy</div>
-  <div class="spacer-8"></div>
-  <a class="btn" href="#" id="p6">View on Etsy</a>
-</article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- === About === -->
-  <section class="section" id="about">
-    <div class="container about">
-      <div class="avatar">
-        <div>
-          <img src="me2.jpg" alt="Scott in the shop" />
-          <div class="spacer-8"></div>
-        </div>
-      </div>
-      <div>
-        <h2>Meet the Maker</h2>
-        <p>Hi, I’m Scott — I design and laser-engrave record art, anodized aluminum hat clips, signs, and gifts in Niagara Falls, NY. Each piece is finished and packed by hand.</p>
-        <div class="link-row">
-          <a class="btn btn-primary" href="#" id="etsyLink4">Shop Etsy</a>
-          <a class="btn" href="mailto:hello@celticgracedesigns.com">Email Me</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- === Reviews === -->
-  <section class="section" aria-labelledby="reviews-heading">
-    <div class="container">
-      <h2 id="reviews-heading">Kind Words From Customers</h2>
-      <div class="reviews">
-        <div class="review">⭐⭐⭐⭐⭐<br>“Beautifully made — even better in person. Fast shipping!”</div>
-        <div class="review">⭐⭐⭐⭐⭐<br>“The record art was a perfect gift. Great communication.”</div>
-        <div class="review">⭐⭐⭐⭐⭐<br>“Quality is top-notch. Will be back for more!”</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- === Email / Newsletter === -->
-  <section class="section" id="newsletter">
-    <div class="container newsletter">
-      <div class="box">
-        <h2>Get First Dibs on New Drops & Events</h2>
-        <p>Join the list for occasional updates — new product drops, event invites, and subscriber-only offers.</p>
-        <div style="padding:12px;border-radius:12px;border:1px dashed rgba(255,255,255,.22);background:rgba(255,255,255,.04)">
-          <strong>Newsletter Sign-Up</strong>
-          <div class="spacer-8"></div>
-          <div id="ml-embed">
-            <iframe src="https://preview.mailerlite.io/forms/1580706/162772074245391777/share" title="Celtic Grace Newsletter Signup" style="width:100%;height:420px;border:0;border-radius:12px;background:#0f1712"></iframe>
-          </div>
-        </div>
-      </div>
-      <div class="box">
-        <h3 style="margin-top:0">Why join?</h3>
-        <ul style="margin:0; padding-left:18px">
-          <li>Event-only discounts & bundles</li>
-          <li>First look at limited runs</li>
-          <li>Giveaway access (gift certificates > free stuff 😉)</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container foot-grid">
-      <div>
-        <div class="logo"><span class="logo-mark" aria-hidden="true"></span> Celtic Grace Designs</div>
-        <div class="spacer-12"></div>
-        <div class="link-row">
-          <a href="#" id="etsyLink5">Etsy</a>
-          <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://facebook.com/" target="_blank" rel="noopener">Facebook</a>
-          <a href="mailto:hello@celticgracedesigns.com">hello@celticgracedesigns.com</a>
-        </div>
-      </div>
-      <div>
-        <div>© <span id="year"></span> Celtic Grace Designs • Niagara Falls, NY</div>
-        <div class="spacer-8"></div>
-        <small>Handmade with care. Hosted on GitHub Pages.</small>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // === QUICK CONFIG ===
-    const ETSY_SHOP_URL = "https://celticgracedesigns.etsy.com";
-    const ET_SY_BILLS_URL = "https://www.etsy.com/listing/4314121934/do-good-be-good-god-bless-and-go-bills";
-    const ET_SY_CLIPS_URL = "https://www.etsy.com/listing/4352373048/custom-hat-clip-laser-engraved-anodized";
-    const ET_SY_NORTHPOLE_URL = "https://www.etsy.com/listing/4346019238/pick-a-seat-not-a-side-wedding-sign-svg";
-    const ET_SY_DUSTER_URL = "https://www.etsy.com/listing/4353377258/crochet-sunflower-granny-square-duster";
-    const ET_SY_BUFFETT_URL = "https://www.etsy.com/listing/4314110992/jimmy-buffett-margaritaville-inspired";
-    const ET_SY_HALLOWEEN_URL = "https://www.etsy.com/listing/4352707383/halloween-coffee-bar-sign-funny-ghost";
-
-    // Wire links
-    const setHref = (id, url) => { const el = document.getElementById(id); if(el && url && url !== '#'){ el.href = url; el.target = "_blank"; el.rel = "noopener"; }};
-    ["etsyLink","etsyLink2","etsyLink4","etsyLink5"].forEach(id=>setHref(id, ETSY_SHOP_URL));
-    const setBtn = (id,url)=>{ const el=document.getElementById(id); if(el) { el.href = url; el.target="_blank"; el.rel="noopener"; }};
-    setBtn("p1", ET_SY_BILLS_URL);
-    setBtn("p2", ET_SY_CLIPS_URL);
-    setBtn("p3", ET_SY_NORTHPOLE_URL);
-    setBtn("p4", ET_SY_DUSTER_URL);
-    setBtn("p5", ET_SY_BUFFETT_URL);
-    setBtn("p6", ET_SY_HALLOWEEN_URL);
-
-
-    // Year stamp
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
-
-
-
-
-
+  // Year stamp
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
