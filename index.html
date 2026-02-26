@@ -3,262 +3,414 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Celtic Grace Designs — Laser-Crafted Art & Gifts</title>
-  <meta name="description" content="Handmade laser-engraved record art, custom hat clips, signs, and gifts — crafted in Niagara Falls, NY. Browse featured pieces or shop our Etsy store." />
-  <meta property="og:title" content="Celtic Grace Designs" />
-  <meta property="og:description" content="Laser-crafted record art & custom gifts. Shop Etsy." />
+  <title>Celtic Grace Designs + Music Reimagined — Record Art Made in Niagara Falls</title>
+
+  <meta name="description" content="Framed faux-record art made in Niagara Falls, NY. Find us at Old Falls Street Music Fridays (June–August 2026) and shop ready-to-ship pieces on Etsy." />
+  <meta name="theme-color" content="#0e1510" />
+  <link rel="canonical" href="https://celticgracedesigns.com/" />
+
+  <meta property="og:title" content="Celtic Grace Designs + Music Reimagined" />
+  <meta property="og:description" content="Framed faux-record art • Old Falls Street Music Fridays • Shop Etsy." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://celticgracedesigns.com/" />
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-
-  <!-- Styles -->
-  <style>
-    :root{
-      --bg:#0e1510; --bg-2:#0b100c; --surface:#121a14; --text:#e9f2eb; --muted:#c3d0c7;
-      --brand:#2fbf71; --brand-2:#94e0b7; --accent:#ffd166; --danger:#ff6b6b;
-      --shadow:0 10px 30px rgba(0,0,0,.35); --radius:20px;
-    }
-    *{box-sizing:border-box} html,body{height:100%}
-    body{
-      margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      color:var(--text);
-      background: radial-gradient(1200px 600px at 10% -10%, rgba(47,191,113,.15), transparent 60%),
-                  radial-gradient(800px 500px at 110% 10%, rgba(148,224,183,.12), transparent 60%),
-                  linear-gradient(180deg,var(--bg),var(--bg-2));
-      line-height:1.6;
-    }
-    a{color:inherit}
-    .container{max-width:1100px;margin:0 auto;padding:0 20px}
-    header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(140%) blur(10px);background:rgba(14,21,16,.5);border-bottom:1px solid rgba(255,255,255,.06)}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    .logo{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.3px}
-    .logo-mark{width:28px;height:28px;border-radius:8px;background:conic-gradient(from 0deg at 50% 50%, var(--brand), #1b7f4b 120deg, #0a5e35 240deg, var(--brand));box-shadow:var(--shadow)}
-    .nav-links{display:flex;gap:18px;align-items:center}
-    .nav-links a{opacity:.9;text-decoration:none}
-    .btn{display:inline-block;padding:12px 16px;border-radius:14px;font-weight:700;text-decoration:none;border:1px solid rgba(255,255,255,.12);transition:.2s background,.2s transform;}
-    .btn:hover{transform:translateY(-1px)}
-    .btn-primary{background:linear-gradient(180deg,var(--brand),#1aa45d);color:#062a16;border-color:transparent}
-    .btn-ghost{background:rgba(255,255,255,.06)}
-
-    .hero{padding:64px 0 36px;position:relative;overflow:hidden}
-    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
-    .headline{font-family:'Playfair Display',serif;font-size:clamp(34px,5vw,54px);line-height:1.1;margin:0 0 12px}
-    .subtitle{color:var(--muted);max-width:50ch;margin:8px 0 22px}
-    .hero-card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03));padding:18px;border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);box-shadow:var(--shadow)}
-    .hero-img{aspect-ratio:4/3;width:100%;border-radius:16px;background:linear-gradient(135deg,#1a2a21,#0f1712);border:1px solid rgba(255,255,255,.08);display:grid;place-items:center;font-weight:700;color:#88bfa0}
-    .hero-img small{opacity:.7;font-weight:600}
-
-    .banner{margin:14px 0 0}
-    .banner-inner{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:14px 16px;border-radius:14px;background:linear-gradient(180deg,rgba(255,209,102,.18),rgba(255,209,102,.10));border:1px dashed rgba(255,209,102,.6)}
-    .banner strong{color:#c2a441}
-    .tag{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.14);font-size:.9rem}
-
-    .section{padding:44px 0}
-    .section h2{font-size:clamp(22px,3.6vw,30px);margin:0 0 18px}
-    .grid{display:grid;gap:18px}
-    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
-    @media (max-width:900px){.hero-grid{grid-template-columns:1fr}.grid.cols-3{grid-template-columns:1fr 1fr}}
-    @media (max-width:620px){.grid.cols-3{grid-template-columns:1fr}}
-
-    .card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03));padding:14px;border:1px solid rgba(255,255,255,.08);border-radius:16px;box-shadow:var(--shadow)}
-    .card img{width:100%;aspect-ratio:1/1;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:#0f1712;object-fit:cover}
-    .card .title{font-weight:700;margin:12px 0 4px}
-    .card .price{opacity:.85}
-
-    .about{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-    .about .avatar{border-radius:14px;aspect-ratio:4/3;background:linear-gradient(135deg,#162018,#0c130e);border:1px solid rgba(255,255,255,.08);display:grid;place-items:center}
-    @media (max-width:900px){.about{grid-template-columns:1fr}}
-
-    .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .review{padding:16px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08)}
-    @media (max-width:900px){.reviews{grid-template-columns:1fr}}
-
-    .newsletter{display:grid;grid-template-columns:1fr .6fr;gap:18px;align-items:center}
-    @media (max-width:900px){.newsletter{grid-template-columns:1fr}}
-    .newsletter .box{padding:18px;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.08);border-radius:14px}
-
-    footer{padding:40px 0;border-top:1px solid rgba(255,255,255,.08);opacity:.9}
-    .foot-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    @media (max-width:700px){.foot-grid{grid-template-columns:1fr}}
-    .link-row{display:flex;gap:14px;flex-wrap:wrap}
-
-    .spacer-8{height:8px}
-    .spacer-12{height:12px}
-    .spacer-20{height:20px}
-    .pill{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);font-weight:700}
-    .hero-photo{width:100%;height:100%;object-fit:cover;border-radius:16px;border:1px solid rgba(255,255,255,.08)}
-  </style>
 
   <!-- Pinterest Domain Verify -->
   <meta name="p:domain_verify" content="d3df46f08d0e1d76a8601ae72563e75c"/>
 
   <link rel="icon" type="image/png" href="Favicon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0e1510; --bg-2:#0b100c; --surface:#121a14; --text:#e9f2eb; --muted:#c3d0c7;
+      --brand:#2fbf71; --brand-2:#94e0b7; --accent:#ffd166; --danger:#ff6b6b;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --radius:20px;
+      --border:1px solid rgba(255,255,255,.08);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(47,191,113,.16), transparent 60%),
+        radial-gradient(800px 500px at 110% 10%, rgba(148,224,183,.12), transparent 60%),
+        linear-gradient(180deg,var(--bg),var(--bg-2));
+      line-height:1.6;
+    }
+    a{color:inherit}
+    .container{max-width:1120px;margin:0 auto;padding:0 20px}
+
+    header{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:saturate(140%) blur(10px);
+      background:rgba(14,21,16,.55);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:14px}
+    .logo{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px}
+    .logo small{display:block;font-weight:600;opacity:.75;font-size:.85rem;margin-top:-2px}
+    .logo-mark{
+      width:30px;height:30px;border-radius:10px;
+      background:conic-gradient(from 0deg at 50% 50%, var(--brand), #1b7f4b 120deg, #0a5e35 240deg, var(--brand));
+      box-shadow:var(--shadow);
+    }
+    .nav-links{display:flex;gap:18px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+    .nav-links a{opacity:.9;text-decoration:none}
+    .nav-links a:hover{opacity:1;text-decoration:underline;text-underline-offset:4px}
+
+    .btn{
+      display:inline-block;padding:12px 16px;border-radius:14px;font-weight:800;text-decoration:none;
+      border:1px solid rgba(255,255,255,.12);
+      transition:.2s background,.2s transform,.2s opacity;
+      cursor:pointer; user-select:none;
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{background:linear-gradient(180deg,var(--brand),#1aa45d);color:#062a16;border-color:transparent}
+    .btn-ghost{background:rgba(255,255,255,.06)}
+    .btn-soft{background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04))}
+    .pill{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:7px 10px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.06);
+      font-weight:800;font-size:.92rem;
+      white-space:nowrap;
+    }
+
+    .hero{padding:56px 0 24px;position:relative;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center}
+    .headline{font-family:'Playfair Display',serif;font-size:clamp(34px,5vw,54px);line-height:1.08;margin:0 0 12px}
+    .subtitle{color:var(--muted);max-width:64ch;margin:10px 0 18px}
+
+    .hero-card{
+      background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03));
+      padding:16px;border:var(--border);border-radius:var(--radius);box-shadow:var(--shadow)
+    }
+    .hero-media{
+      aspect-ratio:4/3;width:100%;border-radius:16px;
+      border:1px solid rgba(255,255,255,.08);
+      background:linear-gradient(135deg,#1a2a21,#0f1712);
+      overflow:hidden; position:relative;
+    }
+    .hero-photo{width:100%;height:100%;object-fit:cover;display:block}
+    .hero-badge{position:absolute;left:12px;bottom:12px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+
+    .section{padding:44px 0}
+    .section h2{font-size:clamp(22px,3.6vw,30px);margin:0 0 14px}
+    .section p.lead{color:var(--muted);max-width:76ch;margin:0 0 18px}
+
+    .grid{display:grid;gap:18px}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+    @media (max-width:980px){.hero-grid{grid-template-columns:1fr}.grid.cols-3{grid-template-columns:1fr 1fr}}
+    @media (max-width:640px){.grid.cols-3,.grid.cols-2{grid-template-columns:1fr}}
+
+    .card{
+      background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03));
+      padding:14px;border:var(--border);border-radius:16px;box-shadow:var(--shadow)
+    }
+    .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+    .muted{color:var(--muted)}
+
+    .banner{
+      margin-top:14px;
+      border-radius:16px;
+      border:1px dashed rgba(255,209,102,.6);
+      background:linear-gradient(180deg,rgba(255,209,102,.18),rgba(255,209,102,.10));
+      padding:14px 16px;
+    }
+    .banner strong{color:#d7b24a}
+    .event-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px}
+    @media(max-width:900px){.event-grid{grid-template-columns:1fr}}
+    .event-table{
+      width:100%;border-collapse:separate;border-spacing:0;
+      overflow:hidden;border-radius:14px;border:1px solid rgba(255,255,255,.10);
+      background:rgba(0,0,0,.12);
+    }
+    .event-table th,.event-table td{padding:10px 12px;text-align:left;border-bottom:1px solid rgba(255,255,255,.08)}
+    .event-table th{font-size:.92rem;opacity:.9}
+    .event-table td{color:var(--muted)}
+    .event-table tr:last-child td{border-bottom:0}
+
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    @media (max-width:900px){.about{grid-template-columns:1fr}}
+    .avatar{
+      border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.08);
+      background:linear-gradient(135deg,#162018,#0c130e);
+      aspect-ratio:4/3;
+    }
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+
+    .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    @media (max-width:900px){.reviews{grid-template-columns:1fr}}
+    .review{padding:16px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08)}
+
+    .newsletter{display:grid;grid-template-columns:1fr .65fr;gap:18px;align-items:start}
+    @media (max-width:900px){.newsletter{grid-template-columns:1fr}}
+    .box{padding:18px;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.03));border:var(--border);border-radius:14px}
+
+    footer{padding:40px 0;border-top:1px solid rgba(255,255,255,.08);opacity:.95}
+    .foot-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    @media (max-width:760px){.foot-grid{grid-template-columns:1fr}}
+    .link-row{display:flex;gap:14px;flex-wrap:wrap}
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Celtic Grace Designs",
+    "url": "https://celticgracedesigns.com/",
+    "email": "hello@celticgracedesigns.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Niagara Falls",
+      "addressRegion": "NY",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://www.etsy.com/shop/celticgracedesigns"
+    ]
+  }
+  </script>
 </head>
+
 <body>
-  <!-- === Header / Nav === -->
   <header>
     <div class="container nav">
-      <div class="logo"><span class="logo-mark" aria-hidden="true"></span> Celtic Grace Designs</div>
+      <div class="logo">
+        <span class="logo-mark" aria-hidden="true"></span>
+        <div>
+          Celtic Grace Designs
+          <small class="muted">Record Art • + Music Reimagined</small>
+        </div>
+      </div>
+
       <nav class="nav-links" aria-label="Main">
-        <a href="#shop">Shop</a>
+        <a href="#events">Music Fridays</a>
+        <a href="#recordart">Record Art</a>
         <a href="#about">About</a>
-        <a href="#updates">Updates</a>
         <a href="#newsletter">Join List</a>
         <a class="btn btn-primary" href="#" id="etsyLink">Shop on Etsy</a>
       </nav>
     </div>
   </header>
 
-  <!-- === Hero === -->
   <section class="hero">
     <div class="container hero-grid">
       <div>
-        <h1 class="headline">Laser-Crafted Art & Gifts, Made in Niagara Falls</h1>
-        <p class="subtitle">Music-inspired record art, anodized aluminum hat clips, custom patches, and seasonal signage — designed and made by hand.</p>
-        <div class="link-row">
-          <a class="btn btn-primary" href="#" id="etsyLink2">Shop Our Etsy Store</a>
-          <a class="btn btn-ghost" href="#shop">Browse Featured</a>
+        <div class="row" style="margin-bottom:12px">
+          <span class="pill">📍 Niagara Falls, NY</span>
+          <span class="pill">🎶 Old Falls Street Music Fridays</span>
+          <span class="pill">🖼️ Framed Record Art</span>
         </div>
 
-        <!-- Updates / Events -->
-        <div class="spacer-12"></div>
-        <div class="banner" id="updates" aria-live="polite">
-          <div class="banner-inner" style="border-color:rgba(255,255,255,.25)">
-            <span class="tag">📅 Updates</span>
+        <h1 class="headline">Framed record art for the people who feel songs.</h1>
+        <p class="subtitle">
+          I make “faux record” wall art — framed, ready-to-ship, and built around the music that raised us.
+          Catch me at Old Falls Street Music Fridays or shop online.
+        </p>
+
+        <div class="row" style="margin:14px 0 18px">
+          <a class="btn btn-primary" href="#events">See dates + booth info</a>
+          <a class="btn btn-ghost" href="#" id="etsyLink2">Shop Etsy</a>
+          <a class="btn btn-soft" href="#newsletter">Get updates</a>
+        </div>
+
+        <div class="banner" id="events">
+          <div class="row" style="justify-content:space-between;align-items:flex-start;gap:14px">
             <div>
-              <div><strong>Next Event: TBA</strong></div>
-              <div>We’re considering the <em>Wings of Hope</em> charity market (8′ table • $40 goes to the cause). We’ll post confirmation here.</div>
+              <div class="pill">📅 2026 Dates (planned)</div>
+              <div style="height:8px"></div>
+              <div>
+                <strong id="nextEventTitle">Next pop-up: TBA</strong>
+                <div class="muted" id="nextEventLine">Old Falls Street • Music Fridays</div>
+              </div>
             </div>
+            <div class="row">
+              <a class="btn btn-primary" href="#" id="mapsLink">Open Map</a>
+              <a class="btn btn-ghost" href="#recordart">What I bring</a>
+            </div>
+          </div>
+
+          <div class="event-grid">
+            <div class="card" style="box-shadow:none">
+              <div style="font-weight:900;margin-bottom:8px">What I’m bringing</div>
+              <ul class="muted" style="margin:0;padding-left:18px">
+                <li>Framed record art — ready to take home</li>
+                <li>Limited runs + new drops (Music Reimagined)</li>
+                <li>Custom orders (order at the table, ship or pickup next week)</li>
+              </ul>
+              <div style="height:10px"></div>
+              <div class="muted" style="font-size:.95rem">
+                Note: I don’t cut into real vinyl records.
+              </div>
+            </div>
+
+            <div class="card" style="box-shadow:none">
+              <div style="font-weight:900;margin-bottom:8px">Upcoming dates</div>
+              <div style="overflow:auto">
+                <table class="event-table" aria-label="Upcoming event dates">
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Time</th>
+                      <th>Notes</th>
+                    </tr>
+                  </thead>
+                  <tbody id="eventsTbody"></tbody>
+                </table>
+              </div>
+              <div class="muted" style="margin-top:10px">
+                Bookmark this page — I’ll keep dates updated if anything shifts.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="height:14px"></div>
+
+        <div class="card" style="box-shadow:none">
+          <div style="font-weight:900;margin-bottom:6px">“Ask at the table” items</div>
+          <div class="muted">
+            I may have a small stash of <strong>Music Reimagined logo hat clips</strong> under the table.
+            If you want a <strong>shirt</strong>, I’ll take the order and ship it — or you can grab it the next week.
           </div>
         </div>
       </div>
 
       <div class="hero-card">
-        <div class="hero-img">
-          <img src="tent1.jpg" alt="Celtic Grace Designs tent display" class="hero-photo" />
+        <div class="hero-media">
+          <img src="tent1.jpg" alt="Celtic Grace Designs booth setup" class="hero-photo" />
+          <div class="hero-badge">
+            <span class="pill">🎸 Music-inspired</span>
+            <span class="pill">🖼️ Framed</span>
+            <span class="pill">⚡ Ready-to-ship</span>
+          </div>
+        </div>
+        <div class="row" style="justify-content:space-between;margin-top:12px">
+          <div class="muted">Want a custom build?</div>
+          <a class="btn btn-ghost" href="mailto:hello@celticgracedesigns.com">Email</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- === Featured Products === -->
-  <section class="section" id="shop">
+  <!-- Record Art Section -->
+  <section class="section" id="recordart">
     <div class="container">
-      <h2>Featured Picks</h2>
+      <h2>Record Art (the main thing)</h2>
+      <p class="lead">
+        This is what I’m known for: framed “faux record” wall art built around iconic music + hometown favorites.
+        Most pieces are one-off or short runs.
+      </p>
+
       <div class="grid cols-3">
-        <!-- CARD 1 -->
-        <article class="card">
-          <img src="DoGood.jpg" alt="Do Good, Be Good, God Bless and Go Bills — record art" />
-          <div class="title">Go Bills Record Art</div>
-          <div class="price">From $30 • Ready to ship</div>
-          <div class="spacer-8"></div>
-          <a class="btn" href="#" id="p1">View on Etsy</a>
-        </article>
-
-        <!-- CARD 2 -->
-        <article class="card">
-          <img src="CabellerosScout.jpg" alt="Custom anodized aluminum hat clip — Caballeros Scout design" />
-          <div class="title">Custom Hat Clip (Black)</div>
-          <div class="price">Made to order • $7</div>
-          <div class="spacer-8"></div>
-          <a class="btn" href="#" id="p2">View on Etsy</a>
-        </article>
-
-        <!-- CARD 3 (SVG) -->
-        <article class="card">
-          <img src="seats not sides.jpg" alt="Wedding sign SVG — Pick a Seat, Not a Side" />
-          <div class="title">Wedding Sign (SVG)</div>
-          <div class="price">Digital file • Instant download</div>
-          <div class="spacer-8"></div>
-          <a class="btn" href="#" id="p3">View on Etsy</a>
-        </article>
-
-        <!-- CARD 4 (NEW: Crochet Duster) -->
-        <article class="card">
-          <img src="Duster.jpg" alt="Handmade crochet duster with sunflower granny squares" />
-          <div class="title">Crochet Duster — Sunflower</div>
-          <div class="price">$225 • Ready to ship</div>
-          <div class="spacer-8"></div>
-          <a class="btn" href="#" id="p4">View on Etsy</a>
-        </article>
-
-        <!-- CARD 5 (Jimmy Buffett) -->
-        <article class="card">
-          <img src="buffett.jpg" alt="Jimmy Buffett silhouette record art wall décor" />
-          <div class="title">Jimmy Buffett Record Art</div>
-          <div class="price">See details on Etsy</div>
-          <div class="spacer-8"></div>
-          <a class="btn" href="#" id="p5">View on Etsy</a>
-        </article>
-
-        <!-- CARD 6 (Halloween Coffee Bar Sign) -->
-        <article class="card">
-          <img src="scream.jpg" alt="Funny ghost Halloween coffee bar sign décor" />
-          <div class="title">Halloween Coffee Bar Sign</div>
-          <div class="price">See details on Etsy</div>
-          <div class="spacer-8"></div>
-          <a class="btn" href="#" id="p6">View on Etsy</a>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- === About === -->
-  <section class="section" id="about">
-    <div class="container about">
-      <div class="avatar">
-        <div>
-          <img src="me2.jpg" alt="Scott in the shop" />
-          <div class="spacer-8"></div>
+        <div class="card">
+          <div style="font-weight:900;margin-bottom:6px">Ready-to-ship pieces</div>
+          <div class="muted">Grab it now, ships fast. Best option for gifts.</div>
+        </div>
+        <div class="card">
+          <div style="font-weight:900;margin-bottom:6px">Custom builds</div>
+          <div class="muted">Tell me the song/artist/theme — I’ll quote it and build it.</div>
+        </div>
+        <div class="card">
+          <div style="font-weight:900;margin-bottom:6px">Show specials</div>
+          <div class="muted">Bundles + small discounts sometimes happen at Music Fridays.</div>
         </div>
       </div>
-      <div>
-        <h2>Meet the Maker</h2>
-        <p>Hi, I’m Scott — I design and laser-engrave record art, anodized aluminum hat clips, signs, and gifts in Niagara Falls, NY. Each piece is finished and packed by hand.</p>
-        <div class="link-row">
-          <a class="btn btn-primary" href="#" id="etsyLink4">Shop Etsy</a>
-          <a class="btn" href="mailto:hello@celticgracedesigns.com">Email Me</a>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- === Reviews === -->
-  <section class="section" aria-labelledby="reviews-heading">
-    <div class="container">
-      <h2 id="reviews-heading">Kind Words From Customers</h2>
-      <div class="reviews">
-        <div class="review">⭐⭐⭐⭐⭐<br>“Beautifully made — even better in person. Fast shipping!”</div>
-        <div class="review">⭐⭐⭐⭐⭐<br>“The record art was a perfect gift. Great communication.”</div>
-        <div class="review">⭐⭐⭐⭐⭐<br>“Quality is top-notch. Will be back for more!”</div>
-      </div>
-    </div>
-  </section>
+      <div style="height:18px"></div>
 
-  <!-- === Email / Newsletter === -->
-  <section class="section" id="newsletter">
-    <div class="container newsletter">
-      <div class="box">
-        <h2>Get First Dibs on New Drops & Events</h2>
-        <p>Join the list for occasional updates — new product drops, event invites, and subscriber-only offers.</p>
-        <div style="padding:12px;border-radius:12px;border:1px dashed rgba(255,255,255,.22);background:rgba(255,255,255,.04)">
-          <strong>Newsletter Sign-Up</strong>
-          <div class="spacer-8"></div>
-          <div id="ml-embed">
-            <iframe src="https://preview.mailerlite.io/forms/1580706/162772074245391777/share" title="Celtic Grace Newsletter Signup" style="width:100%;height:420px;border:0;border-radius:12px;background:#0f1712"></iframe>
+      <div class="card">
+        <div class="row" style="justify-content:space-between">
+          <div>
+            <div style="font-weight:900">Shop the full collection on Etsy</div>
+            <div class="muted">That’s where the live inventory stays current.</div>
+          </div>
+          <div class="row">
+            <a class="btn btn-primary" href="#" id="etsyLink3">Shop Etsy</a>
+            <a class="btn btn-ghost" href="mailto:hello@celticgracedesigns.com">Custom request</a>
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container about">
+      <div class="avatar">
+        <img src="me2.jpg" alt="Scott in the shop" />
+      </div>
+
+      <div>
+        <h2>Meet the Maker</h2>
+        <p class="lead">
+          Hi, I’m Scott — I design and laser-make framed record art in Niagara Falls, NY.
+          If you see the tent at Old Falls Street, come say hi and tell me your “time machine song.”
+        </p>
+
+        <div class="row">
+          <a class="btn btn-primary" href="#" id="etsyLink4">Shop on Etsy</a>
+          <a class="btn btn-ghost" href="#events">Music Fridays dates</a>
+          <a class="btn btn-soft" href="mailto:hello@celticgracedesigns.com">Email</a>
+        </div>
+
+        <div style="height:14px"></div>
+
+        <div class="card" style="box-shadow:none">
+          <div style="font-weight:900;margin-bottom:6px">Music Reimagined</div>
+          <div class="muted">
+            A micro-brand for music-inspired drops + content. If you want logo hat clips or shirts, ask at the table.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section" aria-labelledby="reviews-heading">
+    <div class="container">
+      <h2 id="reviews-heading">Kind Words</h2>
+      <div class="reviews">
+        <div class="review">⭐⭐⭐⭐⭐<br>“Beautifully made — even better in person. Fast shipping!”</div>
+        <div class="review">⭐⭐⭐⭐⭐<br>“Perfect gift. Great communication.”</div>
+        <div class="review">⭐⭐⭐⭐⭐<br>“Top-notch quality. Will be back!”</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="section" id="newsletter">
+    <div class="container newsletter">
+      <div class="box">
+        <h2>Get Music Fridays updates + new drops</h2>
+        <p class="lead">Occasional emails only. Dates, new pieces, and the good stuff.</p>
+
+        <div style="padding:12px;border-radius:12px;border:1px dashed rgba(255,255,255,.22);background:rgba(255,255,255,.04)">
+          <strong>Newsletter Sign-Up</strong>
+          <div style="height:10px"></div>
+          <iframe
+            src="https://preview.mailerlite.io/forms/1580706/162772074245391777/share"
+            title="Celtic Grace Designs Newsletter Signup"
+            style="width:100%;height:420px;border:0;border-radius:12px;background:#0f1712">
+          </iframe>
+        </div>
+      </div>
+
       <div class="box">
         <h3 style="margin-top:0">Why join?</h3>
         <ul style="margin:0; padding-left:18px">
-          <li>Event-only discounts & bundles</li>
-          <li>First look at limited runs</li>
+          <li>Dates + weather-proof updates</li>
+          <li>First look at new record art</li>
           <li>Giveaway access (gift certificates > free stuff 😉)</li>
         </ul>
       </div>
@@ -268,71 +420,120 @@
   <footer>
     <div class="container foot-grid">
       <div>
-        <div class="logo"><span class="logo-mark" aria-hidden="true"></span> Celtic Grace Designs</div>
-        <div class="spacer-12"></div>
+        <div class="logo">
+          <span class="logo-mark" aria-hidden="true"></span>
+          <div>
+            Celtic Grace Designs
+            <small class="muted">Record Art • + Music Reimagined</small>
+          </div>
+        </div>
+        <div style="height:12px"></div>
         <div class="link-row">
           <a href="#" id="etsyLink5">Etsy</a>
-          <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://facebook.com/" target="_blank" rel="noopener">Facebook</a>
+          <a href="#" id="igLink" target="_blank" rel="noopener">Instagram</a>
+          <a href="#" id="fbLink" target="_blank" rel="noopener">Facebook</a>
           <a href="mailto:hello@celticgracedesigns.com">hello@celticgracedesigns.com</a>
         </div>
       </div>
+
       <div>
         <div>© <span id="year"></span> Celtic Grace Designs • Niagara Falls, NY</div>
-        <div class="spacer-8"></div>
-        <small>Handmade with care. Hosted on GitHub Pages.</small>
+        <div style="height:8px"></div>
+        <small class="muted">Handmade with care • Hosted on GitHub Pages</small>
       </div>
     </div>
   </footer>
 
-  <!-- === Link Wiring + Year (safe) === -->
   <script>
-    // === QUICK CONFIG ===
+    // =========================
+    // QUICK CONFIG
+    // =========================
     const ETSY_SHOP_URL = "https://celticgracedesigns.etsy.com/?utm_source=website&utm_medium=landing_page&utm_campaign=share_and_save";
-    const ET_SY_BILLS_URL = "https://www.etsy.com/listing/4314121934/go-bills-faux-record-josh-allen?utm_source=website&utm_medium=landing_page&utm_campaign=share_and_save";
-    const ET_SY_CLIPS_URL = "https://www.etsy.com/listing/4352373048/custom-laser-engraved-hat-clip-anodized?utm_source=website&utm_medium=landing_page&utm_campaign=share_and_save";
-    const ET_SY_NORTHPOLE_URL = "https://www.etsy.com/listing/4346019238/inclusive-wedding-sign-svg-pick-a-seat?utm_source=website&utm_medium=landing_page&utm_campaign=share_and_save";
-    const ET_SY_DUSTER_URL = "https://www.etsy.com/listing/4353377258/crochet-sunflower-granny-square-duster?utm_source=website&utm_medium=landing_page&utm_campaign=share_and_save";
-    const ET_SY_BUFFETT_URL = "https://www.etsy.com/listing/4314110992/jimmy-buffett-margaritaville-inspired?utm_source=website&utm_medium=landing_page&utm_campaign=share_and_save";
-    const ET_SY_HALLOWEEN_URL = "https://www.etsy.com/listing/4352707383/halloween-coffee-bar-sign-funny-ghost?utm_source=website&utm_medium=landing_page&utm_campaign=share_and_save";
+    const INSTAGRAM_URL = "https://instagram.com/"; // <- replace
+    const FACEBOOK_URL  = "https://facebook.com/";  // <- replace
+    const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Old+Falls+Street+Niagara+Falls+NY";
 
-    // Wire links
+    // Put times if you want (if unknown, leave "TBA")
+    const EVENTS = [
+      { date: "2026-06-26", time: "TBA", note: "Old Falls Street Music Fridays" },
+      { date: "2026-07-17", time: "TBA", note: "Old Falls Street Music Fridays" },
+      { date: "2026-07-24", time: "TBA", note: "Old Falls Street Music Fridays" },
+      { date: "2026-08-07", time: "TBA", note: "Old Falls Street Music Fridays" },
+      { date: "2026-08-14", time: "TBA", note: "Old Falls Street Music Fridays" }
+    ];
+
+    // =========================
+    // HELPERS
+    // =========================
     const setHref = (id, url) => {
       const el = document.getElementById(id);
-      if (el && url && url !== '#') { el.href = url; el.target = "_blank"; el.rel = "noopener"; }
-    };
-    ["etsyLink","etsyLink2","etsyLink4","etsyLink5"].forEach(id=>setHref(id, ETSY_SHOP_URL));
-
-    const setBtn = (id,url)=>{
-      const el=document.getElementById(id);
-      if(el){ el.href = url; el.target="_blank"; el.rel="noopener"; }
-    };
-    setBtn("p1", ET_SY_BILLS_URL);
-    setBtn("p2", ET_SY_CLIPS_URL);
-    setBtn("p3", ET_SY_NORTHPOLE_URL);
-    setBtn("p4", ET_SY_DUSTER_URL);
-    setBtn("p5", ET_SY_BUFFETT_URL);
-    setBtn("p6", ET_SY_HALLOWEEN_URL);
-
-    // Safe Year stamp
-    (function () {
-      const setYear = () => {
-        const y = document.getElementById('year');
-        if (y) y.textContent = new Date().getFullYear();
-      };
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', setYear);
-      } else {
-        setYear();
+      if (el && url) {
+        el.href = url;
+        if (url.startsWith("http")) { el.target = "_blank"; el.rel = "noopener"; }
       }
-    })();
+    };
+
+    const fmt = (isoDate) => {
+      const d = new Date(isoDate + "T12:00:00");
+      return d.toLocaleDateString(undefined, { weekday:"short", month:"short", day:"numeric", year:"numeric" });
+    };
+
+    function renderEvents() {
+      const tbody = document.getElementById("eventsTbody");
+      const nextTitle = document.getElementById("nextEventTitle");
+      const nextLine = document.getElementById("nextEventLine");
+      if (!tbody || !nextTitle || !nextLine) return;
+
+      const today = new Date();
+      const upcoming = EVENTS
+        .map(e => ({...e, _d: new Date(e.date + "T12:00:00")}))
+        .sort((a,b) => a._d - b._d);
+
+      const future = upcoming.filter(e => e._d >= new Date(today.getFullYear(), today.getMonth(), today.getDate()));
+
+      if (future.length) {
+        const n = future[0];
+        nextTitle.textContent = `Next pop-up: ${fmt(n.date)} • ${n.time || "TBA"}`;
+        nextLine.textContent = n.note || "Old Falls Street Music Fridays";
+      } else {
+        nextTitle.textContent = "Next pop-up: (dates listed below)";
+        nextLine.textContent = "Update the EVENTS list when new dates are added.";
+      }
+
+      tbody.innerHTML = "";
+      upcoming.forEach(e => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${fmt(e.date)}</td>
+          <td>${e.time || "TBA"}</td>
+          <td>${(e.note || "").replace(/</g,"&lt;").replace(/>/g,"&gt;")}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    // =========================
+    // INIT
+    // =========================
+    document.addEventListener("DOMContentLoaded", () => {
+      // Etsy links
+      ["etsyLink","etsyLink2","etsyLink3","etsyLink4","etsyLink5"].forEach(id => setHref(id, ETSY_SHOP_URL));
+
+      // Social + maps
+      setHref("igLink", INSTAGRAM_URL);
+      setHref("fbLink", FACEBOOK_URL);
+      setHref("mapsLink", MAPS_URL);
+
+      // Events + year
+      renderEvents();
+      const y = document.getElementById("year");
+      if (y) y.textContent = new Date().getFullYear();
+    });
   </script>
 
-  <!-- === Pinterest Tag (moved to end; safe + toggle) === -->
+  <!-- Pinterest Tag (kept clean; no fake email) -->
   <script>
-    // Flip to true to disable quickly if troubleshooting
     const DISABLE_PINTEREST_TAG = false;
-
     (function(){
       if (DISABLE_PINTEREST_TAG) return;
       try {
@@ -344,15 +545,14 @@
             var r=document.getElementsByTagName("script")[0];r.parentNode.insertBefore(t,r)
           }
         }("https://s.pinimg.com/ct/core.js");
-        pintrk('load','2614487119519',{em:'<user_email_address>'});
+        pintrk('load','2614487119519');
         pintrk('page');
-      } catch(e) { /* swallow errors so page still renders */ }
+      } catch(e) {}
     })();
   </script>
   <noscript>
     <img height="1" width="1" style="display:none;" alt=""
          src="https://ct.pinterest.com/v3/?event=init&tid=2614487119519&noscript=1" />
   </noscript>
-  <!-- === End Pinterest Tag === -->
 </body>
 </html>
