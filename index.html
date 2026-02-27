@@ -369,6 +369,7 @@ Every design starts with a song, a memory, or a moment. The goal isnâ€™t just dÃ
       ETSY_SHOP_URL: "https://celticgracedesigns.etsy.com/?utm_source=website&utm_medium=landing_page&utm_campaign=share_and_save",
       EMAIL: "hello@celticgracedesigns.com",
       MAPS_URL: "https://www.google.com/maps/search/?api=1&query=Old+Falls+Street+Niagara+Falls+NY",
+      HIT_COUNTER_ID: "celticgracedesigns",
 
       // Hero text
       HERO_HEADLINE: "Made for music people.",
@@ -484,7 +485,27 @@ Every design starts with a song, a memory, or a moment. The goal isnâ€™t just dÃ
         grid.appendChild(a);
       });
     }
+function renderHitCounter() {
+  if (!UPDATE.HIT_COUNTER_ID) return;
 
+  const footer = document.querySelector("footer .container");
+  if (!footer) return;
+
+  const counter = document.createElement("div");
+  counter.style.marginTop = "12px";
+  counter.style.opacity = ".7";
+  counter.style.fontSize = ".85rem";
+
+  counter.innerHTML = `
+    <img
+      src="https://hitscounter.dev/api/hit?url=${UPDATE.HIT_COUNTER_ID}&label=Visitors&icon=music&color=%232fbf71"
+      alt="Visitor counter"
+      style="vertical-align:middle;"
+    />
+  `;
+
+  footer.appendChild(counter);
+}
     document.addEventListener("DOMContentLoaded", () => {
       // Text
       const hh = document.getElementById("heroHeadline");
@@ -509,6 +530,7 @@ Every design starts with a song, a memory, or a moment. The goal isnâ€™t just dÃ
       // Events + featured
       renderEvents();
       renderFeatured();
+      renderHitCounter();
 
       // Year
       const y = document.getElementById("year");
@@ -541,6 +563,7 @@ Every design starts with a song, a memory, or a moment. The goal isnâ€™t just dÃ
   </noscript>
 </body>
 </html>
+
 
 
 
