@@ -1,40 +1,34 @@
-<!-- DO NOT EDIT BELOW THIS LINE UNLESS SCOTT IS CALM 2.26.26 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Celtic Grace Designs + Music Reimagined — Laser-Crafted Art in Niagara Falls</title>
 
-  <!-- Primary SEO -->
-  <meta name="description" content="Laser-crafted record art, hat clips, custom gifts, and music-inspired designs made in Niagara Falls, NY. Find us at Old Falls Street Music Fridays and shop on Etsy." />
-  <meta name="theme-color" content="#0e1510" />
-  <link rel="canonical" href="https://celticgracedesigns.com/" />
-
-  <!-- Open Graph / Social -->
-  <meta property="og:title" content="Celtic Grace Designs + Music Reimagined" />
-  <meta property="og:description" content="Record art, hat clips, custom gifts — and music-inspired drops. Find us at Old Falls Street Music Fridays. Shop Etsy." />
+  <title>Celtic Grace Designs — Record Art + Music Fridays</title>
+  <meta name="description" content="Framed record art made in Niagara Falls, NY. Find us at Old Falls Street Music Fridays (5–10 PM) and shop on Etsy." />
+  <meta property="og:title" content="Celtic Grace Designs" />
+  <meta property="og:description" content="Framed record art • Old Falls Street Music Fridays • Shop Etsy" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://celticgracedesigns.com/" />
-  <!-- If you have a good share image, add it -->
-  <!-- <meta property="og:image" content="https://celticgracedesigns.com/og.jpg" /> -->
 
-  <!-- Pinterest Domain Verify -->
-  <meta name="p:domain_verify" content="d3df46f08d0e1d76a8601ae72563e75c"/>
-
-  <link rel="icon" type="image/png" href="Favicon.png">
+  <!-- build: 2026-02-26-A -->
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
+  <!-- Pinterest Domain Verify (keep if you use Pinterest) -->
+  <meta name="p:domain_verify" content="d3df46f08d0e1d76a8601ae72563e75c"/>
+
+  <link rel="icon" type="image/png" href="Favicon.png">
+
   <style>
     :root{
-      --bg:#0e1510; --bg-2:#0b100c; --surface:#121a14; --text:#e9f2eb; --muted:#c3d0c7;
-      --brand:#2fbf71; --brand-2:#94e0b7; --accent:#ffd166; --danger:#ff6b6b;
+      --bg:#0e1510; --bg2:#0b100c; --text:#e9f2eb; --muted:#c3d0c7;
+      --brand:#2fbf71; --brand2:#94e0b7; --accent:#ffd166;
       --shadow:0 10px 30px rgba(0,0,0,.35);
-      --radius:20px;
+      --radius:18px;
       --border:1px solid rgba(255,255,255,.08);
     }
     *{box-sizing:border-box}
@@ -46,41 +40,54 @@
       background:
         radial-gradient(1200px 600px at 10% -10%, rgba(47,191,113,.16), transparent 60%),
         radial-gradient(800px 500px at 110% 10%, rgba(148,224,183,.12), transparent 60%),
-        linear-gradient(180deg,var(--bg),var(--bg-2));
+        linear-gradient(180deg,var(--bg),var(--bg2));
       line-height:1.6;
     }
     a{color:inherit}
-    .container{max-width:1120px;margin:0 auto;padding:0 20px}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
 
-    /* Header */
     header{
       position:sticky;top:0;z-index:50;
       backdrop-filter:saturate(140%) blur(10px);
       background:rgba(14,21,16,.55);
       border-bottom:1px solid rgba(255,255,255,.06);
     }
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:14px}
-    .logo{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 0}
+    .logo{display:flex;align-items:center;gap:12px;font-weight:900}
     .logo small{display:block;font-weight:600;opacity:.75;font-size:.85rem;margin-top:-2px}
     .logo-mark{
       width:30px;height:30px;border-radius:10px;
       background:conic-gradient(from 0deg at 50% 50%, var(--brand), #1b7f4b 120deg, #0a5e35 240deg, var(--brand));
       box-shadow:var(--shadow);
     }
-    .nav-links{display:flex;gap:18px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
-    .nav-links a{opacity:.9;text-decoration:none}
-    .nav-links a:hover{opacity:1;text-decoration:underline;text-underline-offset:4px}
+    nav{display:flex;gap:16px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+    nav a{text-decoration:none;opacity:.92}
+    nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:4px}
+
     .btn{
-      display:inline-block;padding:12px 16px;border-radius:14px;font-weight:800;text-decoration:none;
+      display:inline-block;
+      padding:12px 16px;
+      border-radius:14px;
+      font-weight:900;
+      text-decoration:none;
       border:1px solid rgba(255,255,255,.12);
-      transition:.2s background,.2s transform,.2s opacity;
-      cursor:pointer;
-      user-select:none;
+      background:rgba(255,255,255,.06);
+      transition:.2s transform,.2s opacity;
     }
-    .btn:hover{transform:translateY(-1px)}
-    .btn-primary{background:linear-gradient(180deg,var(--brand),#1aa45d);color:#062a16;border-color:transparent}
-    .btn-ghost{background:rgba(255,255,255,.06)}
-    .btn-soft{background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04))}
+    .btn:hover{transform:translateY(-1px);opacity:1}
+    .btn-primary{
+      background:linear-gradient(180deg,var(--brand),#1aa45d);
+      color:#062a16;border-color:transparent;
+    }
+
+    section{padding:44px 0; scroll-margin-top: 90px;}
+    .hero{padding:56px 0 26px}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:center}
+    @media(max-width:920px){.hero-grid{grid-template-columns:1fr}}
+
+    .headline{font-family:"Playfair Display",serif;font-size:clamp(34px,5vw,54px);line-height:1.08;margin:0 0 12px}
+    .subtitle{color:var(--muted);max-width:66ch;margin:10px 0 18px}
+
     .pill{
       display:inline-flex;align-items:center;gap:8px;
       padding:7px 10px;border-radius:999px;
@@ -89,421 +96,241 @@
       font-weight:800;font-size:.92rem;
       white-space:nowrap;
     }
-
-    /* Layout */
-    .hero{padding:56px 0 24px;position:relative;overflow:hidden}
-    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center}
-    .headline{font-family:'Playfair Display',serif;font-size:clamp(34px,5vw,54px);line-height:1.08;margin:0 0 12px}
-    .subtitle{color:var(--muted);max-width:60ch;margin:10px 0 18px}
-
-    .hero-card{
-      background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03));
-      padding:16px;border:var(--border);border-radius:var(--radius);box-shadow:var(--shadow)
-    }
-    .hero-media{
-      aspect-ratio:4/3;width:100%;border-radius:16px;
-      border:1px solid rgba(255,255,255,.08);
-      background:linear-gradient(135deg,#1a2a21,#0f1712);
-      overflow:hidden;
-      position:relative;
-    }
-    .hero-photo{width:100%;height:100%;object-fit:cover;display:block}
-    .hero-badge{
-      position:absolute;left:12px;bottom:12px;
-      display:flex;gap:10px;align-items:center;flex-wrap:wrap;
-    }
-
-    .section{padding:44px 0}
-    .section h2{font-size:clamp(22px,3.6vw,30px);margin:0 0 14px}
-    .section p.lead{color:var(--muted);max-width:70ch;margin:0 0 18px}
-
-    .grid{display:grid;gap:18px}
-    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
-    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
-    @media (max-width:980px){.hero-grid{grid-template-columns:1fr}.grid.cols-3{grid-template-columns:1fr 1fr}}
-    @media (max-width:640px){.grid.cols-3,.grid.cols-2{grid-template-columns:1fr}}
-    .card{
-      background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03));
-      padding:14px;border:var(--border);border-radius:16px;box-shadow:var(--shadow)
-    }
-    .card img{
-      width:100%;aspect-ratio:1/1;border-radius:12px;border:1px solid rgba(255,255,255,.08);
-      background:#0f1712;object-fit:cover
-    }
-    .card .title{font-weight:900;margin:12px 0 4px}
-    .card .meta{opacity:.85}
     .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
 
-    /* Brand toggle */
-    .toggle{
-      display:inline-flex;gap:6px;padding:6px;border-radius:999px;
-      background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
-    }
-    .toggle button{
-      font:inherit;color:inherit;border:0;background:transparent;
-      padding:10px 12px;border-radius:999px;font-weight:900;opacity:.85;
-      cursor:pointer;
-    }
-    .toggle button[aria-pressed="true"]{
-      background:linear-gradient(180deg,rgba(47,191,113,.35),rgba(47,191,113,.18));
-      border:1px solid rgba(47,191,113,.40);
-      opacity:1;
+    .card{
+      background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03));
+      border:var(--border);
+      border-radius:16px;
+      box-shadow:var(--shadow);
+      padding:16px;
     }
 
-    /* Event box */
-    .banner{
-      margin-top:14px;
+    .photo{
+      aspect-ratio:4/3;width:100%;
       border-radius:16px;
-      border:1px dashed rgba(255,209,102,.6);
-      background:linear-gradient(180deg,rgba(255,209,102,.18),rgba(255,209,102,.10));
-      padding:14px 16px;
+      border:1px solid rgba(255,255,255,.08);
+      overflow:hidden;
+      background:linear-gradient(135deg,#1a2a21,#0f1712);
     }
-    .banner strong{color:#d7b24a}
-    .event-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px}
-    @media(max-width:900px){.event-grid{grid-template-columns:1fr}}
-    .event-list{margin:0;padding-left:18px}
-    .event-list li{margin:6px 0;color:var(--muted)}
-    .event-table{
-      width:100%;border-collapse:separate;border-spacing:0;
-      overflow:hidden;border-radius:14px;border:1px solid rgba(255,255,255,.10);
+    .photo img{width:100%;height:100%;object-fit:cover;display:block}
+
+    .grid{display:grid;gap:18px}
+    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    @media(max-width:900px){.grid.cols-3{grid-template-columns:1fr 1fr}}
+    @media(max-width:640px){.grid.cols-3,.grid.cols-2{grid-template-columns:1fr}}
+
+    .muted{color:var(--muted)}
+    h2{font-size:clamp(22px,3.6vw,30px);margin:0 0 12px}
+    .lead{color:var(--muted);max-width:80ch;margin:0 0 16px}
+
+    /* Events highlight */
+    .banner{
+      border-radius:16px;
+      border:1px solid rgba(255,209,102,.35);
+      background:linear-gradient(180deg,rgba(255,209,102,.14),rgba(255,209,102,.08));
+      padding:16px;
+    }
+    table{
+      width:100%;
+      border-collapse:separate;border-spacing:0;
+      overflow:hidden;border-radius:14px;
+      border:1px solid rgba(255,255,255,.10);
       background:rgba(0,0,0,.12);
     }
-    .event-table th,.event-table td{padding:10px 12px;text-align:left;border-bottom:1px solid rgba(255,255,255,.08)}
-    .event-table th{font-size:.92rem;opacity:.9}
-    .event-table td{color:var(--muted)}
-    .event-table tr:last-child td{border-bottom:0}
-    .kbd{
-      font-weight:900;font-size:.85rem;
-      padding:4px 8px;border-radius:10px;
-      border:1px solid rgba(255,255,255,.16);
-      background:rgba(255,255,255,.06);
-      display:inline-block;
+    th,td{padding:10px 12px;text-align:left;border-bottom:1px solid rgba(255,255,255,.08)}
+    th{font-size:.92rem;opacity:.9}
+    td{color:var(--muted)}
+    tr:last-child td{border-bottom:0}
+
+    .product img{
+      width:100%;
+      aspect-ratio:1/1;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.08);
+      object-fit:cover;
+      background:#0f1712;
     }
+    .product .title{font-weight:900;margin:10px 0 2px}
+    .product .meta{color:var(--muted);font-size:.95rem;margin:0 0 10px}
 
-    /* About */
-    .about{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-    @media (max-width:900px){.about{grid-template-columns:1fr}}
-    .avatar{
-      border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.08);
-      background:linear-gradient(135deg,#162018,#0c130e);
-      aspect-ratio:4/3;
+    footer{
+      padding:40px 0;
+      border-top:1px solid rgba(255,255,255,.08);
+      opacity:.95;
     }
-    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
-
-    /* Reviews */
-    .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    @media (max-width:900px){.reviews{grid-template-columns:1fr}}
-    .review{
-      padding:16px;border-radius:14px;background:rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.08)
-    }
-
-    /* Newsletter */
-    .newsletter{display:grid;grid-template-columns:1fr .65fr;gap:18px;align-items:start}
-    @media (max-width:900px){.newsletter{grid-template-columns:1fr}}
-    .box{padding:18px;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.03));border:var(--border);border-radius:14px}
-
-    footer{padding:40px 0;border-top:1px solid rgba(255,255,255,.08);opacity:.95}
     .foot-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    @media (max-width:760px){.foot-grid{grid-template-columns:1fr}}
-    .link-row{display:flex;gap:14px;flex-wrap:wrap}
-    .muted{color:var(--muted)}
-    .sr-only{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+    @media(max-width:760px){.foot-grid{grid-template-columns:1fr}}
   </style>
-
-  <!-- Basic LocalBusiness schema (safe + helpful for search) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Celtic Grace Designs",
-    "url": "https://celticgracedesigns.com/",
-    "email": "hello@celticgracedesigns.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Niagara Falls",
-      "addressRegion": "NY",
-      "addressCountry": "US"
-    },
-    "sameAs": [
-      "https://www.etsy.com/shop/celticgracedesigns"
-    ]
-  }
-  </script>
 </head>
 
 <body>
-  <!-- Header / Nav -->
   <header>
     <div class="container nav">
-      <div class="logo" aria-label="Celtic Grace Designs">
+      <div class="logo">
         <span class="logo-mark" aria-hidden="true"></span>
         <div>
           Celtic Grace Designs
-          <small class="muted">+ Music Reimagined</small>
+          <small class="muted">Record Art • Old Falls Street Music Fridays</small>
         </div>
       </div>
-
-      <nav class="nav-links" aria-label="Main">
+      <nav aria-label="Main">
         <a href="#events">Music Fridays</a>
         <a href="#featured">Featured</a>
         <a href="#about">About</a>
         <a href="#newsletter">Join List</a>
-        <a class="btn btn-primary" href="#" id="etsyLink">Shop on Etsy</a>
+        <a class="btn btn-primary" href="#" id="etsyLinkTop">Shop on Etsy</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero -->
+  <!-- HERO -->
   <section class="hero">
     <div class="container hero-grid">
       <div>
         <div class="row" style="margin-bottom:12px">
           <span class="pill">📍 Niagara Falls, NY</span>
           <span class="pill">🎶 Old Falls Street</span>
-          <span class="pill">🔥 Laser-made</span>
+          <span class="pill">🖼️ Framed Record Art</span>
         </div>
 
-        <h1 class="headline">Made for music people.</h1>
-        <p class="subtitle">
-          Record art, hat clips, gifts, and limited-run music-inspired drops — made in Niagara Falls and brought out to the street when the bands are playing.
+        <h1 class="headline" id="heroHeadline">Made for music people.</h1>
+        <p class="subtitle" id="heroSubtext">
+          Framed record art built around the music that raised us — made in Niagara Falls and brought out when the bands are playing.
         </p>
 
         <div class="row" style="margin:14px 0 18px">
-          <a class="btn btn-primary" href="#events">See Music Fridays Info</a>
-          <a class="btn btn-ghost" href="#" id="etsyLink2">Shop Etsy</a>
-
-          <div class="toggle" role="group" aria-label="Brand selector">
-            <button id="brandCGD" type="button" aria-pressed="true">Celtic Grace Designs</button>
-            <button id="brandMR" type="button" aria-pressed="false">Music Reimagined</button>
-          </div>
+          <a class="btn btn-primary" href="#events">See Music Fridays info</a>
+          <a class="btn" href="#" id="etsyLinkHero">Shop Etsy</a>
+          <a class="btn" href="mailto:hello@celticgracedesigns.com" id="emailBtn">Email</a>
         </div>
 
-        <div class="card" id="brandCard" style="padding:16px">
-          <div class="row" style="justify-content:space-between">
-            <div>
-              <div style="font-weight:900;font-size:1.05rem" id="brandTitle">Celtic Grace Designs</div>
-              <div class="muted" id="brandDesc">Laser-crafted art, gifts, hat clips, patches, signs, and custom work.</div>
-            </div>
-            <div class="row">
-              <a class="btn btn-soft" href="#featured">Featured Picks</a>
-              <a class="btn" href="mailto:hello@celticgracedesigns.com">Email</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="banner" id="events">
+        <div class="banner" id="events" aria-live="polite">
           <div class="row" style="justify-content:space-between;align-items:flex-start;gap:14px">
             <div>
-              <div class="pill">📅 Music Fridays — Old Falls Street</div>
-              <div class="spacer-8"></div>
-              <div>
-                <strong id="nextEventTitle">Next pop-up: TBA</strong>
-                <div class="muted" id="nextEventLine">Add your Music Fridays dates below and this will auto-update.</div>
-              </div>
+              <div class="pill">🗓️ Music Fridays — Old Falls Street</div>
+              <div style="height:8px"></div>
+              <div style="font-weight:900" id="nextEventTitle">Next pop-up: (dates below)</div>
+              <div class="muted" id="nextEventLine">Time: 5–10 PM</div>
             </div>
             <div class="row">
               <a class="btn btn-primary" href="#" id="mapsLink">Open Map</a>
-              <a class="btn btn-ghost" href="#newsletter">Get Updates</a>
+              <a class="btn" href="#newsletter">Get updates</a>
             </div>
           </div>
 
-          <div class="event-grid">
+          <div style="height:14px"></div>
+
+          <div class="grid cols-2">
             <div class="card" style="box-shadow:none">
               <div style="font-weight:900;margin-bottom:8px">What you’ll find at the booth</div>
-              <ul class="event-list">
+              <ul class="muted" style="margin:0;padding-left:18px">
                 <li>Framed “faux record” art (ready-to-ship)</li>
-                <li>Hat clips + small gifts (quick impulse buys)</li>
-                <li>Music Reimagined pieces + new drops</li>
+                <li>Limited runs + new drops</li>
                 <li>Custom orders — ask in person</li>
+                <li>Merch by request (order & ship / pickup later)</li>
               </ul>
             </div>
 
             <div class="card" style="box-shadow:none">
               <div style="font-weight:900;margin-bottom:8px">Upcoming dates</div>
-              <div class="muted" style="margin-bottom:8px">Tip: keep these current — this becomes your “event homepage.”</div>
               <div style="overflow:auto">
-                <table class="event-table" aria-label="Upcoming event dates">
+                <table aria-label="Upcoming Music Fridays dates">
                   <thead>
-                    <tr>
-                      <th>Date</th>
-                      <th>Time</th>
-                      <th>Notes</th>
-                    </tr>
+                    <tr><th>Date</th><th>Time</th><th>Notes</th></tr>
                   </thead>
-                  <tbody id="eventsTbody">
-                    <tr><td colspan="3" class="muted">No dates added yet.</td></tr>
-                  </tbody>
+                  <tbody id="eventsTbody"></tbody>
                 </table>
               </div>
-              <div class="muted" style="margin-top:10px">
-                Add this to your posts: <span class="kbd">celticgracedesigns.com</span> → Music Fridays
+              <div class="muted" style="margin-top:10px;font-size:.95rem">
+                Tip: add this to your posts: <strong>celticgracedesigns.com</strong> → Music Fridays
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="hero-card">
-        <div class="hero-media">
-          <!-- Reuse your existing photo -->
-          <img src="tent1.jpg" alt="Celtic Grace Designs booth setup" class="hero-photo" />
-          <div class="hero-badge">
-            <span class="pill">🎸 Record Art</span>
-            <span class="pill">🧢 Hat Clips</span>
-            <span class="pill">🖤 Custom Work</span>
-          </div>
+      <div class="card">
+        <div class="photo">
+          <!-- keep your existing image filename -->
+          <img src="tent1.jpg" alt="Celtic Grace Designs booth setup" />
         </div>
         <div class="row" style="justify-content:space-between;margin-top:12px">
-          <div class="muted">Want the newest drops?</div>
-          <a class="btn btn-ghost" href="#newsletter">Join the list</a>
+          <div class="muted">Want a custom build? Email me.</div>
+          <a class="btn" href="mailto:hello@celticgracedesigns.com" id="emailBtn2">Email</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Featured Products -->
-  <section class="section" id="featured">
+  <!-- FEATURED -->
+  <section id="featured">
     <div class="container">
       <h2>Featured Picks</h2>
       <p class="lead">A quick “best of” that matches what people actually buy at shows — plus a direct path to Etsy.</p>
 
-      <div class="grid cols-3">
-        <article class="card">
-          <img src="DoGood.jpg" alt="Go Bills record art in a frame" />
-          <div class="title">Go Bills Record Art</div>
-          <div class="meta">From $30 • Ready to ship</div>
-          <div style="height:10px"></div>
-          <a class="btn" href="#" id="p1">View on Etsy</a>
-        </article>
-
-        <article class="card">
-          <img src="CabellerosScout.jpg" alt="Custom anodized aluminum hat clip" />
-          <div class="title">Custom Hat Clip</div>
-          <div class="meta">Made to order • $7</div>
-          <div style="height:10px"></div>
-          <a class="btn" href="#" id="p2">View on Etsy</a>
-        </article>
-
-        <article class="card">
-          <img src="buffett.jpg" alt="Jimmy Buffett inspired record art" />
-          <div class="title">Jimmy Buffett Record Art</div>
-          <div class="meta">See details on Etsy</div>
-          <div style="height:10px"></div>
-          <a class="btn" href="#" id="p5">View on Etsy</a>
-        </article>
-
-        <article class="card">
-          <img src="seats not sides.jpg" alt="Wedding sign SVG pick a seat not a side" />
-          <div class="title">Wedding Sign (SVG)</div>
-          <div class="meta">Digital file • Instant download</div>
-          <div style="height:10px"></div>
-          <a class="btn" href="#" id="p3">View on Etsy</a>
-        </article>
-
-        <article class="card">
-          <img src="Duster.jpg" alt="Crochet sunflower granny square duster" />
-          <div class="title">Crochet Duster — Sunflower</div>
-          <div class="meta">$225 • Ready to ship</div>
-          <div style="height:10px"></div>
-          <a class="btn" href="#" id="p4">View on Etsy</a>
-        </article>
-
-        <article class="card">
-          <img src="scream.jpg" alt="Funny ghost Halloween coffee bar sign" />
-          <div class="title">Halloween Coffee Bar Sign</div>
-          <div class="meta">See details on Etsy</div>
-          <div style="height:10px"></div>
-          <a class="btn" href="#" id="p6">View on Etsy</a>
-        </article>
+      <div class="grid cols-3" id="featuredGrid">
+        <!-- populated by script -->
       </div>
     </div>
   </section>
 
-  <!-- About -->
-  <section class="section" id="about">
-    <div class="container about">
-      <div class="avatar">
-        <img src="me2.jpg" alt="Scott in the shop" />
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container grid cols-2">
+      <div class="card">
+        <div class="photo">
+          <!-- keep your existing image filename -->
+          <img src="me2.jpg" alt="Scott in the shop" />
+        </div>
       </div>
-
-      <div>
-        <h2>Meet the Maker</h2>
-        <p class="lead">
-          Hi, I’m Scott — I design and laser-make record art, hat clips, signs, and gifts in Niagara Falls, NY.
-          If you catch me at Old Falls Street Music Fridays, say hi — I love talking music and making custom pieces that mean something.
+      <div class="card">
+        <h2 style="margin-top:0">Meet the Maker</h2>
+        <p class="muted">
+          Hi, I’m Scott — I design and laser-make framed record art in Niagara Falls, NY.
+          Catch me at Old Falls Street Music Fridays (5–10 PM) or shop online.
         </p>
-
         <div class="row">
-          <a class="btn btn-primary" href="#" id="etsyLink4">Shop on Etsy</a>
-          <a class="btn btn-ghost" href="mailto:hello@celticgracedesigns.com">Email</a>
-          <a class="btn btn-soft" href="#events">Music Fridays info</a>
-        </div>
-
-        <div style="height:14px"></div>
-
-        <div class="card" style="box-shadow:none">
-          <div style="font-weight:900;margin-bottom:6px">Two lanes, one vibe</div>
-          <div class="muted">
-            <strong>Celtic Grace Designs</strong> = handmade gifts + smalls + customs.<br/>
-            <strong>Music Reimagined</strong> = music-inspired drops and content tied to the songs we all live in.
-          </div>
+          <a class="btn btn-primary" href="#" id="etsyLinkAbout">Shop Etsy</a>
+          <a class="btn" href="mailto:hello@celticgracedesigns.com" id="emailBtn3">Email</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Reviews -->
-  <section class="section" aria-labelledby="reviews-heading">
-    <div class="container">
-      <h2 id="reviews-heading">Kind Words From Customers</h2>
-      <div class="reviews">
-        <div class="review">⭐⭐⭐⭐⭐<br>“Beautifully made — even better in person. Fast shipping!”</div>
-        <div class="review">⭐⭐⭐⭐⭐<br>“The record art was a perfect gift. Great communication.”</div>
-        <div class="review">⭐⭐⭐⭐⭐<br>“Quality is top-notch. Will be back for more!”</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Newsletter -->
-  <section class="section" id="newsletter">
-    <div class="container newsletter">
-      <div class="box">
-        <h2>Get first dibs on new drops & Music Fridays updates</h2>
-        <p class="lead">Occasional updates only — new pieces, event dates, and the stuff you’d actually want to know.</p>
+  <!-- NEWSLETTER -->
+  <section id="newsletter">
+    <div class="container grid cols-2">
+      <div class="card">
+        <h2 style="margin-top:0">Get updates</h2>
+        <p class="muted">Occasional emails only — dates, new pieces, and the good stuff.</p>
 
         <div style="padding:12px;border-radius:12px;border:1px dashed rgba(255,255,255,.22);background:rgba(255,255,255,.04)">
           <strong>Newsletter Sign-Up</strong>
           <div style="height:10px"></div>
-          <div id="ml-embed">
-            <iframe
-              src="https://preview.mailerlite.io/forms/1580706/162772074245391777/share"
-              title="Celtic Grace Designs Newsletter Signup"
-              style="width:100%;height:420px;border:0;border-radius:12px;background:#0f1712">
-            </iframe>
-          </div>
+
+          <!-- Replace this iframe src with your MailerLite share link (or leave as-is if it's already correct) -->
+          <iframe
+            id="newsletterFrame"
+            src="https://preview.mailerlite.io/forms/1580706/162772074245391777/share"
+            title="Celtic Grace Designs Newsletter Signup"
+            style="width:100%;height:420px;border:0;border-radius:12px;background:#0f1712">
+          </iframe>
         </div>
       </div>
 
-      <div class="box">
+      <div class="card">
         <h3 style="margin-top:0">Why join?</h3>
-        <ul style="margin:0; padding-left:18px">
-          <li>Event-only bundles</li>
-          <li>First look at limited runs</li>
+        <ul class="muted" style="margin:0;padding-left:18px">
+          <li>Music Fridays date updates</li>
+          <li>First look at new record art</li>
           <li>Giveaway access (gift certificates > free stuff 😉)</li>
         </ul>
-        <div style="height:14px"></div>
-        <div class="card" style="box-shadow:none">
-          <div style="font-weight:900;margin-bottom:6px">Quick tip</div>
-          <div class="muted">
-            At shows, put a QR code to this page and say: “Scan for dates + new drops.”
-          </div>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <div class="container foot-grid">
       <div>
@@ -511,20 +338,18 @@
           <span class="logo-mark" aria-hidden="true"></span>
           <div>
             Celtic Grace Designs
-            <small class="muted">+ Music Reimagined</small>
+            <small class="muted">Niagara Falls, NY</small>
           </div>
         </div>
         <div style="height:12px"></div>
-        <div class="link-row">
-          <a href="#" id="etsyLink5">Etsy</a>
-          <a href="#" id="igLink" target="_blank" rel="noopener">Instagram</a>
-          <a href="#" id="fbLink" target="_blank" rel="noopener">Facebook</a>
-          <a href="mailto:hello@celticgracedesigns.com">hello@celticgracedesigns.com</a>
+        <div class="row">
+          <a href="#" id="etsyLinkFooter">Etsy</a>
+          <a href="mailto:hello@celticgracedesigns.com" id="emailFooter">hello@celticgracedesigns.com</a>
         </div>
       </div>
 
       <div>
-        <div>© <span id="year"></span> Celtic Grace Designs • Niagara Falls, NY</div>
+        <div>© <span id="year"></span> Celtic Grace Designs</div>
         <div style="height:8px"></div>
         <small class="muted">Handmade with care • Hosted on GitHub Pages</small>
       </div>
@@ -532,166 +357,163 @@
   </footer>
 
   <script>
-    // =========================
-    // QUICK CONFIG (EDIT THESE)
-    // =========================
+    // =====================================================
+    // 🔲 SCOTT UPDATE BOX — ONLY EDIT INSIDE THIS BOX 🔲
+    // =====================================================
 
-    // Etsy
-    const ETSY_SHOP_URL = "https://celticgracedesigns.etsy.com/?utm_source=website&utm_medium=landing_page&utm_campaign=share_and_save";
-    const ET_SY_BILLS_URL = "https://www.etsy.com/listing/4314121934/go-bills-faux-record-josh-allen?utm_source=website&utm_medium=landing_page&utm_campaign=share_and_save";
-    const ET_SY_CLIPS_URL = "https://www.etsy.com/listing/4352373048/custom-laser-engraved-hat-clip-anodized?utm_source=website&utm_medium=landing_page&utm_campaign=share_and_save";
-    const ET_SY_NORTHPOLE_URL = "https://www.etsy.com/listing/4346019238/inclusive-wedding-sign-svg-pick-a-seat?utm_source=website&utm_medium=landing_page&utm_campaign=share_and_save";
-    const ET_SY_DUSTER_URL = "https://www.etsy.com/listing/4353377258/crochet-sunflower-granny-square-duster?utm_source=website&utm_medium=landing_page&utm_campaign=share_and_save";
-    const ET_SY_BUFFETT_URL = "https://www.etsy.com/listing/4314110992/jimmy-buffett-margaritaville-inspired?utm_source=website&utm_medium=landing_page&utm_campaign=share_and_save";
-    const ET_SY_HALLOWEEN_URL = "https://www.etsy.com/listing/4352707383/halloween-coffee-bar-sign-funny-ghost?utm_source=website&utm_medium=landing_page&utm_campaign=share_and_save";
+    const UPDATE = {
+      // Main links
+      ETSY_SHOP_URL: "https://celticgracedesigns.etsy.com/?utm_source=website&utm_medium=landing_page&utm_campaign=share_and_save",
+      EMAIL: "hello@celticgracedesigns.com",
+      MAPS_URL: "https://www.google.com/maps/search/?api=1&query=Old+Falls+Street+Niagara+Falls+NY",
 
-    // Social (replace with your real profiles)
-    const INSTAGRAM_URL = "https://instagram.com/"; // <- put CGD or Music Reimagined IG
-    const FACEBOOK_URL  = "https://facebook.com/";  // <- put CGD or Music Reimagined FB
+      // Hero text
+      HERO_HEADLINE: "Made for music people.",
+      HERO_SUBTEXT: "Framed record art built around the music that raised us — made in Niagara Falls and brought out when the bands are playing.",
 
-    // Map link (replace with your preferred map pin)
-    const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Old+Falls+Street+Niagara+Falls+NY";
+      // Music Fridays
+      EVENT_TIME_DEFAULT: "5–10 PM",
+      EVENTS: [
+        { date: "2026-06-26", time: "5–10 PM", note: "Old Falls Street Music Fridays" },
+        { date: "2026-07-17", time: "5–10 PM", note: "Old Falls Street Music Fridays" },
+        { date: "2026-07-24", time: "5–10 PM", note: "Old Falls Street Music Fridays" },
+        { date: "2026-08-07", time: "5–10 PM", note: "Old Falls Street Music Fridays" },
+        { date: "2026-08-14", time: "5–10 PM", note: "Old Falls Street Music Fridays" }
+      ],
 
-    // Music Fridays / Events (edit these)
-    // date format: YYYY-MM-DD so sorting works
-    const EVENTS = [
- const EVENTS = [
-  { date: "2026-06-26", time: "5–10 PM", note: "Old Falls Street Music Fridays" },
-  { date: "2026-07-17", time: "5–10 PM", note: "Old Falls Street Music Fridays" },
-  { date: "2026-07-24", time: "5–10 PM", note: "Old Falls Street Music Fridays" },
-  { date: "2026-08-07", time: "5–10 PM", note: "Old Falls Street Music Fridays" },
-  { date: "2026-08-14", time: "5–10 PM", note: "Old Falls Street Music Fridays" }
-];
-
-    // Brand copy
-    const BRAND = {
-      cgd: {
-        title: "Celtic Grace Designs",
-        desc: "Laser-crafted art, gifts, hat clips, patches, signs, and custom work — made by hand in Niagara Falls."
-      },
-      mr: {
-        title: "Music Reimagined",
-        desc: "Music-inspired drops and content — built for the people who don’t just listen to songs, they live in them."
-      }
+      // Featured items (edit these anytime)
+      // Images are filenames in your repo (same folder as index.html)
+      FEATURED: [
+        {
+          title: "Go Bills Record Art",
+          meta: "From $30 • Ready to ship",
+          img: "DoGood.jpg",
+          alt: "Go Bills record art",
+          url: "https://www.etsy.com/listing/4314121934/go-bills-faux-record-josh-allen?utm_source=website&utm_medium=landing_page&utm_campaign=share_and_save"
+        },
+        {
+          title: "Jimmy Buffett Record Art",
+          meta: "See details on Etsy",
+          img: "buffett.jpg",
+          alt: "Jimmy Buffett record art wall décor",
+          url: "https://www.etsy.com/listing/4314110992/jimmy-buffett-margaritaville-inspired?utm_source=website&utm_medium=landing_page&utm_campaign=share_and_save"
+        },
+        {
+          title: "Custom Record Art (by request)",
+          meta: "Ask at the booth • Or email me",
+          img: "tent1.jpg",
+          alt: "Celtic Grace Designs booth",
+          url: "mailto:hello@celticgracedesigns.com"
+        }
+      ]
     };
 
-    // =========================
-    // LINK WIRING
-    // =========================
+    // =====================================================
+    // ⛔ DO NOT EDIT BELOW THIS LINE ⛔
+    // =====================================================
+
     const setHref = (id, url) => {
       const el = document.getElementById(id);
-      if (el && url) {
-        el.href = url;
-        if (url.startsWith("http")) {
-          el.target = "_blank";
-          el.rel = "noopener";
-        }
-      }
+      if (!el) return;
+      el.href = url;
+      if (url && url.startsWith("http")) { el.target = "_blank"; el.rel = "noopener"; }
     };
 
-    ["etsyLink","etsyLink2","etsyLink4","etsyLink5"].forEach(id => setHref(id, ETSY_SHOP_URL));
-    setHref("p1", ET_SY_BILLS_URL);
-    setHref("p2", ET_SY_CLIPS_URL);
-    setHref("p3", ET_SY_NORTHPOLE_URL);
-    setHref("p4", ET_SY_DUSTER_URL);
-    setHref("p5", ET_SY_BUFFETT_URL);
-    setHref("p6", ET_SY_HALLOWEEN_URL);
-
-    setHref("igLink", INSTAGRAM_URL);
-    setHref("fbLink", FACEBOOK_URL);
-    setHref("mapsLink", MAPS_URL);
-
-    // =========================
-    // EVENTS RENDER
-    // =========================
     const fmt = (isoDate) => {
-      // simple local formatting without libraries
       const d = new Date(isoDate + "T12:00:00");
-      return d.toLocaleDateString(undefined, { weekday:"short", month:"short", day:"numeric", year:"numeric" });
+      return d.toLocaleDateString(undefined, { weekday:"short", month:"short", day:"numeric" });
     };
 
     function renderEvents() {
       const tbody = document.getElementById("eventsTbody");
       const nextTitle = document.getElementById("nextEventTitle");
       const nextLine = document.getElementById("nextEventLine");
-
       if (!tbody || !nextTitle || !nextLine) return;
 
-      const now = new Date();
-      const upcoming = EVENTS
+      const events = Array.isArray(UPDATE.EVENTS) ? UPDATE.EVENTS : [];
+      const upcoming = events
         .map(e => ({...e, _d: new Date(e.date + "T12:00:00")}))
         .sort((a,b) => a._d - b._d);
 
-      const future = upcoming.filter(e => e._d >= new Date(now.getFullYear(), now.getMonth(), now.getDate()));
+      const today = new Date();
+      const startOfToday = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+      const next = upcoming.find(e => e._d >= startOfToday) || upcoming[0];
 
-      // Next event banner
-      if (future.length) {
-        const n = future[0];
-        nextTitle.textContent = `Next pop-up: ${fmt(n.date)} • ${n.time}`;
-        nextLine.textContent = n.note || "Old Falls Street Music Fridays";
-      } else if (upcoming.length) {
-        nextTitle.textContent = "Music Fridays dates (past season)";
-        nextLine.textContent = "Add upcoming dates in the EVENTS list so this stays current.";
-      } else {
-        nextTitle.textContent = "Next pop-up: TBA";
-        nextLine.textContent = "Add your Music Fridays dates in the EVENTS list below.";
-      }
+      nextTitle.textContent = next
+        ? `Next pop-up: ${fmt(next.date)} • ${next.time || UPDATE.EVENT_TIME_DEFAULT}`
+        : "Music Fridays: dates below";
 
-      // Table
+      nextLine.textContent = "Time: " + (UPDATE.EVENT_TIME_DEFAULT || "5–10 PM");
+
       tbody.innerHTML = "";
-      const listForTable = future.length ? future.slice(0, 8) : upcoming.slice(0, 8);
-      if (!listForTable.length) {
-        tbody.innerHTML = `<tr><td colspan="3" class="muted">No dates added yet.</td></tr>`;
+      if (!upcoming.length) {
+        tbody.innerHTML = `<tr><td colspan="3">No dates added yet.</td></tr>`;
         return;
       }
-      listForTable.forEach(e => {
+
+      upcoming.forEach(e => {
         const tr = document.createElement("tr");
         tr.innerHTML = `
           <td>${fmt(e.date)}</td>
-          <td>${e.time || "TBA"}</td>
-          <td>${(e.note || "").replace(/</g,"&lt;").replace(/>/g,"&gt;")}</td>
+          <td>${e.time || UPDATE.EVENT_TIME_DEFAULT || "5–10 PM"}</td>
+          <td>${(e.note || "Old Falls Street Music Fridays")}</td>
         `;
         tbody.appendChild(tr);
       });
     }
 
-    // =========================
-    // BRAND TOGGLE
-    // =========================
-    function setBrand(which) {
-      const cgdBtn = document.getElementById("brandCGD");
-      const mrBtn  = document.getElementById("brandMR");
-      const title  = document.getElementById("brandTitle");
-      const desc   = document.getElementById("brandDesc");
+    function renderFeatured() {
+      const grid = document.getElementById("featuredGrid");
+      if (!grid) return;
 
-      if (!cgdBtn || !mrBtn || !title || !desc) return;
+      const items = Array.isArray(UPDATE.FEATURED) ? UPDATE.FEATURED : [];
+      grid.innerHTML = "";
 
-      const isCGD = which === "cgd";
-      cgdBtn.setAttribute("aria-pressed", String(isCGD));
-      mrBtn.setAttribute("aria-pressed", String(!isCGD));
-
-      title.textContent = isCGD ? BRAND.cgd.title : BRAND.mr.title;
-      desc.textContent  = isCGD ? BRAND.cgd.desc  : BRAND.mr.desc;
+      items.forEach((p) => {
+        const a = document.createElement("article");
+        a.className = "card product";
+        a.innerHTML = `
+          <img src="${p.img}" alt="${p.alt || p.title}" />
+          <div class="title">${p.title || ""}</div>
+          <div class="meta">${p.meta || ""}</div>
+          <a class="btn" href="${p.url || "#"}" ${String(p.url||"").startsWith("http") ? 'target="_blank" rel="noopener"' : ""}>View</a>
+        `;
+        grid.appendChild(a);
+      });
     }
 
-    // Year stamp
-    function setYear() {
+    document.addEventListener("DOMContentLoaded", () => {
+      // Text
+      const hh = document.getElementById("heroHeadline");
+      const hs = document.getElementById("heroSubtext");
+      if (hh) hh.textContent = UPDATE.HERO_HEADLINE || "";
+      if (hs) hs.textContent = UPDATE.HERO_SUBTEXT || "";
+
+      // Links
+      setHref("etsyLinkTop", UPDATE.ETSY_SHOP_URL);
+      setHref("etsyLinkHero", UPDATE.ETSY_SHOP_URL);
+      setHref("etsyLinkAbout", UPDATE.ETSY_SHOP_URL);
+      setHref("etsyLinkFooter", UPDATE.ETSY_SHOP_URL);
+      setHref("mapsLink", UPDATE.MAPS_URL);
+
+      const mail = UPDATE.EMAIL || "hello@celticgracedesigns.com";
+      ["emailBtn","emailBtn2","emailBtn3","emailFooter"].forEach(id => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        el.href = "mailto:" + mail;
+      });
+
+      // Events + featured
+      renderEvents();
+      renderFeatured();
+
+      // Year
       const y = document.getElementById("year");
       if (y) y.textContent = new Date().getFullYear();
-    }
-
-    // Init
-    document.addEventListener("DOMContentLoaded", () => {
-      setYear();
-      renderEvents();
-      setBrand("cgd");
-
-      document.getElementById("brandCGD")?.addEventListener("click", () => setBrand("cgd"));
-      document.getElementById("brandMR")?.addEventListener("click",  () => setBrand("mr"));
     });
   </script>
 
-  <!-- Pinterest Tag (kept, but REMOVE the email placeholder; don’t send fake data) -->
+  <!-- Pinterest Tag (optional) -->
   <script>
     const DISABLE_PINTEREST_TAG = false;
     (function(){
@@ -716,4 +538,3 @@
   </noscript>
 </body>
 </html>
-
