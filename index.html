@@ -499,7 +499,7 @@ function renderHitCounter() {
 
   footer.appendChild(counter);
 
-  fetch(`https://api.countapi.xyz/hit/${UPDATE.HIT_COUNTER_ID}/visits`)
+  fetch(`https://countapi.mileshilliard.com/api/v1/hit/${encodeURIComponent(UPDATE.HIT_COUNTER_ID)}`)
     .then(res => res.json())
     .then(data => {
       counter.textContent = `🎵 Visitors: ${data.value}`;
@@ -565,6 +565,7 @@ function renderHitCounter() {
   </noscript>
 </body>
 </html>
+
 
 
 
