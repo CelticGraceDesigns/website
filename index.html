@@ -495,16 +495,18 @@ function renderHitCounter() {
   counter.style.marginTop = "12px";
   counter.style.opacity = ".7";
   counter.style.fontSize = ".85rem";
-
-  counter.innerHTML = `
-    <img
-      src="https://hitscounter.dev/api/hit?url=${UPDATE.HIT_COUNTER_ID}&label=Visitors&icon=music&color=%232fbf71"
-      alt="Visitor counter"
-      style="vertical-align:middle;"
-    />
-  `;
+  counter.textContent = "Loading visitors...";
 
   footer.appendChild(counter);
+
+  fetch(`https://api.countapi.xyz/hit/${UPDATE.HIT_COUNTER_ID}/visits`)
+    .then(res => res.json())
+    .then(data => {
+      counter.textContent = `🎵 Visitors: ${data.value}`;
+    })
+    .catch(() => {
+      counter.textContent = "🎵 Visitors: unavailable";
+    });
 }
     document.addEventListener("DOMContentLoaded", () => {
       // Text
@@ -563,6 +565,7 @@ function renderHitCounter() {
   </noscript>
 </body>
 </html>
+
 
 
 
