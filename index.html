@@ -42,6 +42,22 @@
         radial-gradient(800px 500px at 110% 10%, rgba(148,224,183,.12), transparent 60%),
         linear-gradient(180deg,var(--bg),var(--bg2));
       line-height:1.6;
+      /* Hero Lyric Styling */
+.lyric {
+  margin: 8px 0 14px;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: .5px;
+  opacity: .9;
+  color: var(--brand2);
+}
+
+.lyric::before,
+.lyric::after {
+  content: "♪";
+  margin: 0 10px;
+  opacity: .6;
+}
     }
     a{color:inherit}
     .container{max-width:1100px;margin:0 auto;padding:0 20px}
@@ -196,6 +212,7 @@
         </div>
 
         <h1 class="headline" id="heroHeadline">Made for music people.</h1>
+        <p class="lyric" id="heroLyric"></p>
         <p class="subtitle" id="heroSubtext">
           Framed record art built around the music that raised us — made in Niagara Falls and brought out when the bands are playing.
         </p>
@@ -374,6 +391,7 @@ Every design starts with a song, a memory, or a moment. The goal isn’t just d�
       // Hero text
       HERO_HEADLINE: "Made for music people.",
       HERO_SUBTEXT: "Framed record art built around the music that raised us — made in Niagara Falls and brought out when the bands are playing.",
+      HERO_LYRIC: "You don’t hear a note but you know the refrain.",
 
       // Music Fridays
       EVENT_TIME_DEFAULT: "5–10 PM",
@@ -514,6 +532,8 @@ function renderHitCounter() {
       const hs = document.getElementById("heroSubtext");
       if (hh) hh.textContent = UPDATE.HERO_HEADLINE || "";
       if (hs) hs.textContent = UPDATE.HERO_SUBTEXT || "";
+      const lyric = document.getElementById("heroLyric");
+if (lyric) lyric.textContent = UPDATE.HERO_LYRIC || "";
 
       // Links
       setHref("etsyLinkTop", UPDATE.ETSY_SHOP_URL);
@@ -565,6 +585,7 @@ function renderHitCounter() {
   </noscript>
 </body>
 </html>
+
 
 
 
