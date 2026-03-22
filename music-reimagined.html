@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music Reimagined | Celtic Grace Designs</title>
+  <style>
+    :root {
+      --bg: #f6f3ec;
+      --card: #ffffff;
+      --text: #1f1f1f;
+      --muted: #666;
+      --accent: #2f5d50;
+      --accent-dark: #21463c;
+      --border: #ddd6c8;
+      --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      --max: 1200px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(var(--max), calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)), url('YOUR-HERO-IMAGE.jpg') center/cover no-repeat;
+      color: #fff;
+      padding: 5rem 0;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      margin: 0 0 1rem;
+      letter-spacing: 0.03em;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto 1.5rem;
+      font-size: 1.05rem;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.9rem 1.2rem;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: bold;
+      transition: 0.2s ease;
+    }
+
+    .btn:hover { background: var(--accent-dark); }
+
+    .btn.secondary {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.4);
+    }
+
+    section { padding: 3rem 0; }
+
+    .section-title {
+      font-size: 2rem;
+      margin: 0 0 0.5rem;
+    }
+
+    .section-intro {
+      margin: 0 0 2rem;
+      color: var(--muted);
+      max-width: 800px;
+    }
+
+    .notice {
+      background: #fff8e8;
+      border: 1px solid #e7d7a5;
+      padding: 1rem 1.2rem;
+      border-radius: 14px;
+      margin-top: 1rem;
+      color: #5d4a12;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      background: #e9e4d8;
+    }
+
+    .card-content {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      flex: 1;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+
+    .meta {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .card-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-top: auto;
+      padding-top: 0.5rem;
+    }
+
+    .small-btn {
+      display: inline-block;
+      padding: 0.7rem 0.95rem;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.92rem;
+      font-weight: bold;
+    }
+
+    .small-btn.alt {
+      background: #ebe6da;
+      color: var(--text);
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+    }
+
+    ul { padding-left: 1.2rem; }
+
+    footer {
+      padding: 2rem 0 3rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 600px) {
+      .hero { padding: 4rem 0; }
+      section { padding: 2.25rem 0; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>Music Reimagined</h1>
+      <p>
+        What song is your time machine? Handcrafted record-inspired wall art, designed and made by Celtic Grace Designs in Niagara Falls, New York.
+      </p>
+      <div class="button-row">
+        <a class="btn" href="#gallery">View Available Pieces</a>
+        <a class="btn secondary" href="#custom-orders">Request a Custom Piece</a>
+        <a class="btn secondary" href="YOUR-ETSY-SHOP-LINK-HERE" target="_blank" rel="noopener">Visit Etsy Shop</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <h2 class="section-title">Record Art Gallery</h2>
+        <p class="section-intro">
+          Browse available and featured pieces below. Each one is built around the idea that music can take you right back to a concert, a road trip, a favorite album, or a memory you never forgot.
+        </p>
+        <div class="notice">
+          Some pieces may not always appear on Etsy due to marketplace policy limits. If you see something here without an Etsy link, use the direct inquiry option and I’ll help you from there.
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="container">
+        <div class="gallery-grid">
+
+          <!-- CARD 1 -->
+          <article class="card">
+            <img src="JimmyBPlain.jpg" alt="Record art placeholder 1" />
+            <div class="card-content">
+              <h3>Jimmy B. Parrot Head</h3>
+              <div class="meta">Material: Wood / Acrylic / Layered</div>
+              <div class="meta">Size: 12 in x 12 in</div>
+              <div class="meta">Status: Available / Sold / Made to Order</div>
+              <div class="card-buttons">
+                <a class="small-btn" href="https://celticgracedesigns.etsy.com/listing/4361749628/jimmy-b-parrot-head-record-art-laser-cut" target="_blank" rel="noopener">Buy on Etsy</a>
+                <a class="small-btn alt" href="#custom-orders">Buy Direct / Ask About This Piece</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 2 -->
+          <article class="card">
+            <img src="MotleyCrue.jpg" alt="Record art placeholder 2" />
+            <div class="card-content">
+              <h3>Motley Crue</h3>
+              <div class="meta">Material: Wood / Acrylic / Layered</div>
+              <div class="meta">Size: 12 in x 12 in</div>
+              <div class="meta">Status: Available / Sold / Made to Order</div>
+              <div class="card-buttons">
+                <a class="small-btn" href="https://celticgracedesigns.etsy.com/listing/4474216476/motley-crue-vinyl-style-wall-art-80s" target="_blank" rel="noopener">Buy on Etsy</a>
+                <a class="small-btn alt" href="#custom-orders">Buy Direct / Ask About This Piece</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 3 -->
+          <article class="card">
+            <img src="DropkickMurphys.jpg" alt="Record art placeholder 3" />
+            <div class="card-content">
+              <h3>Dropkick Murphys</h3>
+              <div class="meta">Material: Wood / Acrylic / Layered</div>
+              <div class="meta">Size: 12 in x 12 in</div>
+              <div class="meta">Status: Available / Sold / Made to Order</div>
+              <div class="card-buttons">
+                <a class="small-btn" href="https://celticgracedesigns.etsy.com/listing/4472592318/dropkick-murphys-record-art-celtic-punk" target="_blank" rel="noopener">Buy on Etsy</a>
+                <a class="small-btn alt" href="#custom-orders">Buy Direct / Ask About This Piece</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 4 -->
+          <article class="card">
+            <img src="ghost.jpg" alt="Record art placeholder 4" />
+            <div class="card-content">
+              <h3>Ghost</h3>
+              <div class="meta">Material: Wood / Acrylic / Layered</div>
+              <div class="meta">Size: 12 in x 12 in</div>
+              <div class="meta">Status: Available / Sold / Made to Order</div>
+              <div class="card-buttons">
+                <a class="small-btn" href="https://celticgracedesigns.etsy.com/listing/4472171972/ghost-inspired-record-art-wall-decor" target="_blank" rel="noopener">Buy on Etsy</a>
+                <a class="small-btn alt" href="#custom-orders">Buy Direct / Ask About This Piece</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 5 -->
+          <article class="card">
+            <img src="JimmyBColor.jpg" alt="Record art placeholder 5" />
+            <div class="card-content">
+              <h3>Jimmy B. Colored Parrot Head</h3>
+              <div class="meta">Material: Wood / Acrylic / Layered</div>
+              <div class="meta">Size: 12 in x 12 in</div>
+              <div class="meta">Status: Available / Sold / Made to Order</div>
+              <div class="card-buttons">
+                <a class="small-btn" href="https://celticgracedesigns.etsy.com/listing/4443391911/jimmy-b-parrot-head-record-art-laser-cut" target="_blank" rel="noopener">Buy on Etsy</a>
+                <a class="small-btn alt" href="#custom-orders">Buy Direct / Ask About This Piece</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 6 -->
+          <article class="card">
+            <img src="Pearl_Ja,.jpg" alt="Record art placeholder 6" />
+            <div class="card-content">
+              <h3>Pearl Jam</h3>
+              <div class="meta">Material: Wood / Acrylic / Layered</div>
+              <div class="meta">Size: 12 in x 12 in</div>
+              <div class="meta">Status: Available / Sold / Made to Order</div>
+              <div class="card-buttons">
+                <a class="small-btn" href="https://celticgracedesigns.etsy.com/listing/4434831638/pearl-jam-ten-inspired-record-art-rock" target="_blank" rel="noopener">Buy on Etsy</a>
+                <a class="small-btn alt" href="#custom-orders">Buy Direct / Ask About This Piece</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 7 -->
+          <article class="card">
+            <img src="Scorpions.jpg" alt="Record art placeholder 7" />
+            <div class="card-content">
+              <h3>Scorpions</h3>
+              <div class="meta">Material: Wood / Acrylic / Layered</div>
+              <div class="meta">Size: 12 in x 12 in</div>
+              <div class="meta">Status: Available / Sold / Made to Order</div>
+              <div class="card-buttons">
+                <a class="small-btn" href="https://celticgracedesigns.etsy.com/listing/4434831638/pearl-jam-ten-inspired-record-art-rock" target="_blank" rel="noopener">Buy on Etsy</a>
+                <a class="small-btn alt" href="#custom-orders">Buy Direct / Ask About This Piece</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 8 -->
+          <article class="card">
+            <img src="BadCo.jpg" alt="Record art placeholder 8" />
+            <div class="card-content">
+              <h3>Bad Company</h3>
+              <div class="meta">Material: Wood / Acrylic / Layered</div>
+              <div class="meta">Size: 12 in x 12 in</div>
+              <div class="meta">Status: Available / Sold / Made to Order</div>
+              <div class="card-buttons">
+                <a class="small-btn" href="https://celticgracedesigns.etsy.com/listing/4460619227/desolation-angels-inspired-record-wall" target="_blank" rel="noopener">Buy on Etsy</a>
+                <a class="small-btn alt" href="#custom-orders">Buy Direct / Ask About This Piece</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container two-col">
+        <div class="panel">
+          <h2 class="section-title">About Music Reimagined</h2>
+          <p>
+            Music Reimagined started with a simple idea: music is a time machine.
+            A single song can take you back to a first concert, a summer drive, a high school memory, or an album that never left you.
+          </p>
+          <p>
+            I create handcrafted record-inspired art using wood, acrylic, and laser engraving to turn those memories into something you can hang on the wall and enjoy every day.
+          </p>
+          <p>
+            Every piece is designed and made in Niagara Falls, New York by Celtic Grace Designs.
+          </p>
+        </div>
+
+        <div class="panel" id="custom-orders">
+          <h2 class="section-title">Custom Orders & Direct Purchase</h2>
+          <p>
+            Looking for a specific artist, song, album vibe, concert memory, or gift idea? I also take custom requests.
+          </p>
+          <ul>
+            <li>Custom music-inspired wall art</li>
+            <li>Commission requests based on your favorite song or era</li>
+            <li>Questions about pieces shown here but not currently listed on Etsy</li>
+          </ul>
+          <p>
+            Replace the contact info below with your preferred method:
+          </p>
+          <p><strong>Email:</strong> YOUR-EMAIL-HERE</p>
+          <p><strong>Contact Page:</strong> <a href="YOUR-CONTACT-PAGE-LINK">YOUR-CONTACT-PAGE-LINK</a></p>
+          <p><strong>Instagram:</strong> <a href="YOUR-INSTAGRAM-LINK" target="_blank" rel="noopener">YOUR-INSTAGRAM-LINK</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© Celtic Grace Designs | Music Reimagined</p>
+    </div>
+  </footer>
+</body>
+</html>
